@@ -1,0 +1,23 @@
+#main-part {
+  display: flex;
+  width: 100%;
+}
+
+.sentence {
+  width: 70%;
+}
+.word {
+  width: 25%;
+}
+
+.sentence-word {
+  width: 100%;
+}
+
+#textinput {
+  width: 40%;
+}
+
+#graph {
+  width: 60%;
+}

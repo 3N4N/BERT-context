@@ -23,83 +23,69 @@ app = Dash()
 app.layout = html.Div([
     html.H1(children='Contexual similarity captured by BERT', style={'textAlign':'center'}),
 
-    html.Div([
-        html.Div([
-            html.Div([
+    html.Div(children=[
+        html.Div(children=[
+            html.Div(children=[
                 dcc.Input(
                     id='sentence1',
+                    className='sentence',
                     type='text',
                     placeholder='Enter sentence',
                     value="we're going there by coach",
                     debounce=True,
-                    style = { 'width': '70%', }
                 ),
                 dcc.Input(
                     id='word1',
+                    className='word',
                     type='text',
                     placeholder='Enter word',
                     value="coach",
                     debounce=True,
-                    style = { 'width': '25%', }
                 ),
-            ], style = {
-                'width': '100%',
-            },),
+            ], className='sentence-word',),
             html.Div([
                 dcc.Input(
                     id='sentence2',
+                    className='sentence',
                     type='text',
                     placeholder='Enter sentence',
                     value="we're going there by bus",
                     debounce=True,
-                    style = { 'width': '70%', }
                 ),
                 dcc.Input(
                     id='word2',
+                    className='word',
                     type='text',
                     placeholder='Enter word',
                     value="bus",
                     debounce=True,
-                    style = { 'width': '25%', }
                 ),
-            ], style = {
-                'width': '100%',
-            },),
+            ], className='sentence-word',),
             html.Div([
                 dcc.Input(
                     id='sentence3',
+                    className='sentence',
                     type='text',
                     placeholder='Enter sentence',
                     value="he was appointed as our coach",
                     debounce=True,
-                    style = { 'width': '70%', }
                 ),
                 dcc.Input(
                     id='word3',
+                    className='word',
                     type='text',
                     placeholder='Enter word',
                     value="coach",
                     debounce=True,
-                    style = { 'width': '25%', }
                 ),
-            ], style = {
-                'width': '100%',
-            },),
-        ], style = {
-            # 'display': 'inline-block',
-            'width': '40%',
-            # 'vertical-align': 'top',
-        },),
+            ], className='sentence-word',),
+        ], id='textinput',),
 
         html.Div(
             dcc.Graph(id='scatter-plot'),
-            style = {
-                # 'display': 'inline-block',
-                'width': '60%',
-                # 'vertical-align': 'top',
-            },
+            id='graph',
         ),
-    ], style={ 'display': 'flex', 'width': '100%', })
+    ], id='main-part')
 ])
 
 @app.callback(
