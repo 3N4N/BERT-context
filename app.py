@@ -20,48 +20,87 @@ model = BertModel.from_pretrained('bert-base-uncased', output_hidden_states=True
 app = Dash()
 
 # Requires Dash 2.17.0 or later
-app.layout = [
-    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
+app.layout = html.Div([
+    html.H1(children='Contexual similarity captured by BERT', style={'textAlign':'center'}),
 
-    dcc.Input(
-        id='sentence1',
-        type='text',
-        placeholder='Enter sentence',
-        value="we're going there by coach"
-    ),
-    dcc.Input(
-        id='sentence2',
-        type='text',
-        placeholder='Enter sentence',
-        value="we're going there by bus"
-    ),
-    dcc.Input(
-        id='sentence3',
-        type='text',
-        placeholder='Enter sentence',
-        value="he was appointed as our coach"
-    ),
-    dcc.Input(
-        id='word1',
-        type='text',
-        placeholder='Enter word',
-        value="coach"
-    ),
-    dcc.Input(
-        id='word2',
-        type='text',
-        placeholder='Enter word',
-        value="bus"
-    ),
-    dcc.Input(
-        id='word3',
-        type='text',
-        placeholder='Enter word',
-        value="coach"
-    ),
+    html.Div([
+        html.Div([
+            html.Div([
+                dcc.Input(
+                    id='sentence1',
+                    type='text',
+                    placeholder='Enter sentence',
+                    value="we're going there by coach",
+                    debounce=True,
+                    style = { 'width': '70%', }
+                ),
+                dcc.Input(
+                    id='word1',
+                    type='text',
+                    placeholder='Enter word',
+                    value="coach",
+                    debounce=True,
+                    style = { 'width': '25%', }
+                ),
+            ], style = {
+                'width': '100%',
+            },),
+            html.Div([
+                dcc.Input(
+                    id='sentence2',
+                    type='text',
+                    placeholder='Enter sentence',
+                    value="we're going there by bus",
+                    debounce=True,
+                    style = { 'width': '70%', }
+                ),
+                dcc.Input(
+                    id='word2',
+                    type='text',
+                    placeholder='Enter word',
+                    value="bus",
+                    debounce=True,
+                    style = { 'width': '25%', }
+                ),
+            ], style = {
+                'width': '100%',
+            },),
+            html.Div([
+                dcc.Input(
+                    id='sentence3',
+                    type='text',
+                    placeholder='Enter sentence',
+                    value="he was appointed as our coach",
+                    debounce=True,
+                    style = { 'width': '70%', }
+                ),
+                dcc.Input(
+                    id='word3',
+                    type='text',
+                    placeholder='Enter word',
+                    value="coach",
+                    debounce=True,
+                    style = { 'width': '25%', }
+                ),
+            ], style = {
+                'width': '100%',
+            },),
+        ], style = {
+            # 'display': 'inline-block',
+            'width': '40%',
+            # 'vertical-align': 'top',
+        },),
 
-    dcc.Graph(id='scatter-plot')
-]
+        html.Div(
+            dcc.Graph(id='scatter-plot'),
+            style = {
+                # 'display': 'inline-block',
+                'width': '60%',
+                # 'vertical-align': 'top',
+            },
+        ),
+    ], style={ 'display': 'flex', 'width': '100%', })
+])
 
 @app.callback(
     Output('scatter-plot', 'figure'),
