@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BERT Layer WiC Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      :root {
+        --primary-color: #3a6ea5;
+        --secondary-color: #f8f9fa;
+        --text-color: #333;
+        --border-color: #dee2e6;
+      }
+
+      body {
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        background-color: #f5f7fa;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
+      .card {
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+      }
+
+      .card-header {
+        padding: 12px 16px;
+        background-color: var(--secondary-color);
+        border-bottom: 1px solid var(--border-color);
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card-body {
+        padding: 16px;
+      }
+
+      .visualization {
+        height: 450px;
+        width: 100%;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 20px;
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+      }
+
+      label {
+        font-weight: 500;
+        margin-bottom: 6px;
+      }
+
+      select,
+      input {
+        padding: 8px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #2a5a8e;
+      }
+
+      .example-item {
+        padding: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+
+      .example-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .example-contexts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .context {
+        padding: 8px;
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .similarity-bar {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+      }
+
+      .bar-label {
+        width: 120px;
+        font-size: 0.85rem;
+      }
+
+      .bar {
+        height: 10px;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+      }
+
+      .loading {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 10;
+      }
+
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid var(--primary-color);
+        width: 32px;
+        height: 32px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .tab-container {
+        margin-bottom: 16px;
+      }
+
+      .tabs {
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .tab {
+        padding: 8px 16px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-bottom: none;
+        margin-bottom: -1px;
+      }
+
+      .tab.active {
+        background-color: white;
+        border-color: var(--border-color);
+        border-radius: 4px 4px 0 0;
+        font-weight: 500;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 16px;
+        border: 1px solid var(--border-color);
+        border-top: none;
+        background-color: white;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .status-message {
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      .status-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .status-error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      .status-info {
+        background-color: #cce5ff;
+        color: #004085;
+        border: 1px solid #b8daff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>BERT Layer WiC Visualization</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-header">Data Input</div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="jsonUpload">Upload analysis results (JSON):</label>
+            <input type="file" id="jsonUpload" accept=".json" />
+          </div>
+          <div id="status" style="margin-top: 10px"></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">Layer Performance</div>
+          <div class="card-body" style="position: relative">
+            <div class="controls">
+              <div class="form-group">
+                <label for="metricSelect">Metric:</label>
+                <select id="metricSelect">
+                  <option value="accuracy">Accuracy</option>
+                  <option value="precision">Precision</option>
+                  <option value="recall">Recall</option>
+                  <option value="f1">F1 Score</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="methodSelect">Method:</label>
+                <select id="methodSelect">
+                  <option value="cosine">Cosine Similarity</option>
+                  <option value="lr">Logistic Regression</option>
+                </select>
+              </div>
+            </div>
+            <div id="performancePlot" class="visualization"></div>
+            <div id="performanceLoading" class="loading">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Word Embedding Analysis</div>
+          <div class="card-body" style="position: relative">
+            <div class="controls">
+              <div class="form-group">
+                <label for="layerSelect">Layer:</label>
+                <select id="layerSelect">
+                  <option value="0">Layer 0 (Input)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="wordSelect">Target Word:</label>
+                <select id="wordSelect">
+                  <option value="all">All Words</option>
+                </select>
+              </div>
+            </div>
+            <div id="embeddingPlot" class="visualization"></div>
+            <div id="embeddingLoading" class="loading">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Layer Comparison</div>
+        <div class="card-body">
+          <div class="tab-container">
+            <div class="tabs">
+              <div class="tab active" data-tab="improved">
+                Improved Examples
+              </div>
+              <div class="tab" data-tab="worsened">Worsened Examples</div>
+            </div>
+            <div id="improved" class="tab-content active">
+              <div id="improvedExamples"></div>
+            </div>
+            <div id="worsened" class="tab-content">
+              <div id="worsenedExamples"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Global state to store loaded data
+      const appState = {
+        data: null,
+        loaded: false,
+      };
+
+      // Initialize the application
+      document.addEventListener("DOMContentLoaded", function () {
+        initTabs();
+
+        // Add event listeners
+        document
+          .getElementById("metricSelect")
+          .addEventListener("change", updatePerformancePlot);
+        document
+          .getElementById("methodSelect")
+          .addEventListener("change", updatePerformancePlot);
+        document
+          .getElementById("layerSelect")
+          .addEventListener("change", updateEmbeddingPlot);
+        document
+          .getElementById("wordSelect")
+          .addEventListener("change", updateEmbeddingPlot);
+        document
+          .getElementById("jsonUpload")
+          .addEventListener("change", handleFileUpload);
+
+        // Show initial status
+        showStatus("Please upload JSON analysis file to begin", "info");
+      });
+
+      function initTabs() {
+        const tabs = document.querySelectorAll(".tab");
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            // Remove active class from all tabs and contents
+            document
+              .querySelectorAll(".tab")
+              .forEach((t) => t.classList.remove("active"));
+            document
+              .querySelectorAll(".tab-content")
+              .forEach((c) => c.classList.remove("active"));
+
+            // Add active class to clicked tab and its content
+            tab.classList.add("active");
+            const tabContent = document.getElementById(tab.dataset.tab);
+            tabContent.classList.add("active");
+          });
+        });
+      }
+
+      function showStatus(message, type = "info") {
+        const statusEl = document.getElementById("status");
+        statusEl.innerHTML = message;
+        statusEl.className = `status-message status-${type}`;
+      }
+
+      function handleFileUpload(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        showStatus(`Loading file: ${file.name}...`, "info");
+        showLoading(true);
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          try {
+            const data = JSON.parse(e.target.result);
+
+            // Verify it has the expected structure
+            if (!data.embedding_visualization || !data.layer_performance) {
+              throw new Error("Invalid data format: missing required fields");
+            }
+
+            appState.data = data;
+            appState.loaded = true;
+
+            // Initialize UI with loaded data
+            initializeUIWithData();
+
+            showStatus(`Data successfully loaded from ${file.name}`, "success");
+          } catch (error) {
+            showStatus(`Error loading data: ${error.message}`, "error");
+          }
+
+          showLoading(false);
+        };
+
+        reader.onerror = function () {
+          showStatus("Error reading file", "error");
+          showLoading(false);
+        };
+
+        reader.readAsText(file);
+      }
+
+      function initializeUIWithData() {
+        // Populate layer select
+        populateLayerSelect();
+
+        // Populate word select
+        populateWordSelect();
+
+        // Update plots
+        updatePerformancePlot();
+        updateEmbeddingPlot();
+
+        // Render examples
+        renderExampleAnalysis();
+      }
+
+      function populateLayerSelect() {
+        const select = document.getElementById("layerSelect");
+        select.innerHTML = "";
+
+        if (!appState.data || !appState.data.embedding_visualization) return;
+
+        const layers = appState.data.embedding_visualization.layers.map(
+          (l) => l.layer
+        );
+
+        layers.forEach((layer) => {
+          const option = document.createElement("option");
+          option.value = layer;
+
+          if (layer === 0) {
+            option.textContent = `Layer ${layer} (Input)`;
+          } else if (layer === Math.max(...layers)) {
+            option.textContent = `Layer ${layer} (Final)`;
+          } else {
+            option.textContent = `Layer ${layer}`;
+          }
+
+          select.appendChild(option);
+        });
+
+        // Select the last layer by default
+        if (layers.length > 0) {
+          select.value = Math.max(...layers);
+        }
+      }
+
+      function populateWordSelect() {
+        const select = document.getElementById("wordSelect");
+        select.innerHTML = '<option value="all">All Words</option>';
+
+        if (!appState.data || !appState.data.target_words) return;
+
+        const words = appState.data.target_words;
+
+        words.forEach((word) => {
+          const option = document.createElement("option");
+          option.value = word;
+          option.textContent = word;
+          select.appendChild(option);
+        });
+      }
+
+      function updatePerformancePlot() {
+        if (!appState.loaded || !appState.data.layer_performance) {
+          return;
+        }
+
+        const metric = document.getElementById("metricSelect").value;
+        const method = document.getElementById("methodSelect").value;
+
+        const plotData = [];
+
+        // Add metric line
+        const perfData = appState.data.layer_performance[method];
+        if (perfData && perfData[metric]) {
+          plotData.push({
+            x: perfData.layers,
+            y: perfData[metric],
+            mode: "lines+markers",
+            name: metric.charAt(0).toUpperCase() + metric.slice(1),
+            line: {
+              color: "#3a6ea5",
+              width: 2,
+            },
+            marker: {
+              size: 8,
+              color: "#3a6ea5",
+            },
+          });
+        }
+
+        const layout = {
+          title: `${
+            method === "cosine" ? "Cosine Similarity" : "Logistic Regression"
+          } Performance`,
+          xaxis: {
+            title: "BERT Layer",
+            tickmode: "array",
+            tickvals: perfData ? perfData.layers : [],
+          },
+          yaxis: {
+            title: metric.charAt(0).toUpperCase() + metric.slice(1),
+            range: [0.5, 1],
+          },
+          margin: {
+            l: 50,
+            r: 20,
+            t: 50,
+            b: 50,
+          },
+          hovermode: "closest",
+        };
+
+        Plotly.newPlot("performancePlot", plotData, layout);
+      }
+
+      function updateEmbeddingPlot() {
+        if (!appState.loaded || !appState.data.embedding_visualization) {
+          return;
+        }
+
+        const layerValue = document.getElementById("layerSelect").value;
+        const wordValue = document.getElementById("wordSelect").value;
+
+        // Find the selected layer data
+        const layerData = appState.data.embedding_visualization.layers.find(
+          (l) => l.layer == layerValue
+        );
+
+        if (!layerData) {
+          console.error(`Layer ${layerValue} not found in data`);
+          return;
+        }
+
+        const plotData = [];
+
+        // Filter points by selected word if specified
+        const points =
+          wordValue === "all"
+            ? layerData.points
+            : layerData.points.filter((p) => p.target_word === wordValue);
+
+        // Create colors mapping for target words
+        const uniqueWords = [...new Set(points.map((p) => p.target_word))];
+        const colors = [
+          "#1f77b4",
+          "#ff7f0e",
+          "#2ca02c",
+          "#d62728",
+          "#9467bd",
+          "#8c564b",
+          "#e377c2",
+          "#7f7f7f",
+          "#bcbd22",
+          "#17becf",
+        ];
+        const wordColors = {};
+        uniqueWords.forEach((word, i) => {
+          wordColors[word] = colors[i % colors.length];
+        });
+
+        // Add connecting lines between contexts
+        points.forEach((point) => {
+          const color =
+            point.label === "same" ? "rgba(0,128,0,0.3)" : "rgba(255,0,0,0.3)";
+
+          plotData.push({
+            x: [point.coordinates[0].x, point.coordinates[1].x],
+            y: [point.coordinates[0].y, point.coordinates[1].y],
+            mode: "lines",
+            line: {
+              color: color,
+              width: 1,
+            },
+            showlegend: false,
+            hoverinfo: "none",
+          });
+        });
+
+        // Add points for each context
+        points.forEach((point) => {
+          const word = point.target_word;
+          const color = wordColors[word];
+
+          // Context 1
+          plotData.push({
+            x: [point.coordinates[0].x],
+            y: [point.coordinates[0].y],
+            mode: "markers+text",
+            type: "scatter",
+            marker: {
+              color: color,
+              size: 10,
+              line: {
+                color: "white",
+                width: 1,
+              },
+            },
+            text: [word],
+            textposition: "top center",
+            name: `${word} (Context 1)`,
+            hovertext: `${word}: ${point.context1.substring(0, 40)}...`,
+            showlegend: wordValue === "all",
+          });
+
+          // Context 2
+          plotData.push({
+            x: [point.coordinates[1].x],
+            y: [point.coordinates[1].y],
+            mode: "markers+text",
+            type: "scatter",
+            marker: {
+              color: color,
+              size: 10,
+              symbol: "square",
+              line: {
+                color: "white",
+                width: 1,
+              },
+            },
+            text: [word],
+            textposition: "top center",
+            name: `${word} (Context 2)`,
+            hovertext: `${word}: ${point.context2.substring(0, 40)}...`,
+            showlegend: wordValue === "all",
+          });
+        });
+
+        const layout = {
+          title: `Layer ${layerValue} Word Embeddings (t-SNE)`,
+          xaxis: {
+            title: "Dimension 1",
+            zeroline: false,
+            showticklabels: false,
+          },
+          yaxis: {
+            title: "Dimension 2",
+            zeroline: false,
+            showticklabels: false,
+            scaleanchor: "x",
+          },
+          margin: {
+            l: 40,
+            r: 20,
+            t: 50,
+            b: 40,
+          },
+          legend: {
+            itemsizing: "constant",
+            itemwidth: 30,
+          },
+          hovermode: "closest",
+          annotations: [
+            {
+              x: 0.5,
+              y: -0.15,
+              xref: "paper",
+              yref: "paper",
+              text: "Red lines = Different meanings, Green lines = Same meaning",
+              showarrow: false,
+              font: {
+                size: 10,
+              },
+            },
+          ],
+        };
+
+        Plotly.newPlot("embeddingPlot", plotData, layout);
+      }
+
+      function renderExampleAnalysis() {
+        if (!appState.loaded || !appState.data.example_analysis) {
+          return;
+        }
+
+        const examples = appState.data.example_analysis;
+
+        // Render improved examples
+        renderExamples("improved", examples.improved || []);
+
+        // Render worsened examples
+        renderExamples("worsened", examples.worsened || []);
+      }
+
+      function renderExamples(type, examples) {
+        const container = document.getElementById(`${type}Examples`);
+        container.innerHTML = "";
+
+        if (examples.length === 0) {
+          container.innerHTML = `<p>No ${type} examples available</p>`;
+          return;
+        }
+
+        examples.forEach((ex) => {
+          const exampleEl = document.createElement("div");
+          exampleEl.className = "example-item";
+
+          const header = document.createElement("div");
+          header.className = "example-header";
+          header.innerHTML = `
+                    <div>Word: <span class="highlight">${ex.target_word}</span></div>
+                    <div>Label: <span class="highlight">${ex.label}</span></div>
+                `;
+
+          const contexts = document.createElement("div");
+          contexts.className = "example-contexts";
+
+          const context1 = document.createElement("div");
+          context1.className = "context";
+          context1.innerHTML = ex.context1;
+
+          const context2 = document.createElement("div");
+          context2.className = "context";
+          context2.innerHTML = ex.context2;
+
+          contexts.appendChild(context1);
+          contexts.appendChild(context2);
+
+          const similarities = document.createElement("div");
+          similarities.innerHTML = `
+                    <div class="similarity-bar">
+                        <div class="bar-label">Layer ${
+                          ex.best_layer
+                        } Similarity:</div>
+                        <div class="bar" style="width: ${
+                          ex.best_sim * 100
+                        }px;"></div>
+                        <div style="margin-left: 8px;">${ex.best_sim.toFixed(
+                          2
+                        )}</div>
+                    </div>
+                    <div class="similarity-bar">
+                        <div class="bar-label">Layer ${
+                          ex.worst_layer
+                        } Similarity:</div>
+                        <div class="bar" style="width: ${
+                          ex.worst_sim * 100
+                        }px;"></div>
+                        <div style="margin-left: 8px;">${ex.worst_sim.toFixed(
+                          2
+                        )}</div>
+                    </div>
+                `;
+
+          exampleEl.appendChild(header);
+          exampleEl.appendChild(contexts);
+          exampleEl.appendChild(similarities);
+
+          container.appendChild(exampleEl);
+        });
+      }
+
+      function showLoading(show) {
+        document.getElementById("performanceLoading").style.display = show
+          ? "flex"
+          : "none";
+        document.getElementById("embeddingLoading").style.display = show
+          ? "flex"
+          : "none";
+      }
+    </script>
+  </body>
+</html>
