@@ -27,6 +27,7 @@ def get_word_embedding_from_sentence(model,tokenizer,sentence,word):
             vec = hidden_states[layer_i][0][token_i]
             embeddings.append(vec)
         token_embeddings.append(embeddings)
+    assert word in map_tokens, f"word '{word}' not in sentence"
     token_idx = map_tokens[word]
     # print(tokens)
     # print(word)
