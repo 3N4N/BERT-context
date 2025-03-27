@@ -1,0 +1,39 @@
+#main-part {
+  /* display: flex; */
+  width: 100%;
+  /* align-items: center; */
+}
+
+#sentence-label {
+  display: inline-block;
+  width: 75%;
+  margin: 5px 15px;
+}
+#word-label {
+  margin: 0px 5px 0px 0px;
+}
+
+.sentence {
+  display: inline-block;
+  width: 75%;
+  margin: 5px 10px;
+}
+.word {
+}
+
+.label {
+  font-weight: bold;
+}
+.sentence-word {
+  margin: auto;
+  width: 700px;
+}
+
+#textinput {
+  /* width: 45%; */
+}
+
+#graph {
+  margin: auto;
+  width: 800px;
+}
