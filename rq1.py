@@ -116,17 +116,10 @@ def _scatter():
     df['Size'] = df.apply(lambda row: abs(len(row['Word1']) - len(row['Word2'])), axis=1)
     df['Size'] = df.apply(lambda row: len(row['Word1']) + len(row['Word2']), axis=1)
 
+    df['Error'] = df.apply(lambda row: 1-row['CoSim'] if row['Synonym']=='T' else row['CoSim'], axis=1)
+    df['Same'] = df.apply(lambda row: len(set(row['Sent1'].split()).intersection(set(row['Sent2'].split()))), axis=1)
+
     return df
-
-
-
-_df = _scatter()
-_df = pd.DataFrame({
-    'X': _df.index,
-    'Y': _df['CoSim'],
-    'Size': _df['Size'],
-    'Color': _df['Color'],
-})
 
 
 
@@ -143,13 +136,66 @@ print(json.dumps(pca_graph_data, indent=2))
 tsne_graph_data = json.loads(df[['Target','_Sentence','Word','tSNE_X','tSNE_Y']].to_json(orient='records'))
 print(json.dumps(tsne_graph_data, indent=2))
 
+
+df_ = _scatter()
+cosim_data = {
+    'synonym': {
+        'min': df_[df_['Synonym']=='T']['CoSim'].min().item(),
+        'max': df_[df_['Synonym']=='T']['CoSim'].max().item(),
+        'avg': df_[df_['Synonym']=='T']['CoSim'].mean().item(),
+        'std': df_[df_['Synonym']=='T']['CoSim'].std().item(),
+    },
+    'homonym': {
+        'min': df_[df_['Synonym']=='F']['CoSim'].min().item(),
+        'max': df_[df_['Synonym']=='F']['CoSim'].max().item(),
+        'avg': df_[df_['Synonym']=='F']['CoSim'].mean().item(),
+        'std': df_[df_['Synonym']=='F']['CoSim'].std().item(),
+    }
+}
+
+_df = pd.DataFrame({
+    'X':        df_.index,
+    'Y':        df_['CoSim'],
+    'Size':     df_['Size'],
+    'Color':    df_['Color'],
+})
 scatter_graph_data = json.loads( _df.to_json(orient='records') )
 print(json.dumps(scatter_graph_data, indent=2))
 
+_df = pd.DataFrame({
+    'X':        df_['Same'],
+    'Y':        df_['Error'],
+    'Size':     5,
+    'Color':    df_['Color'],
+})
+common_word_effect_data = json.loads( _df.to_json(orient='records') )
+print(json.dumps(common_word_effect_data, indent=2))
+
+
 json_data = {
-    'PCA_data': pca_graph_data,
-    'tSNE_data': tsne_graph_data,
-    'scatter_data': scatter_graph_data,
+    'similarity scores': cosim_data,
+    'PCA_data': {
+        'title': 'PCA of BERT token embeddings',
+        'description': 'This graph highlights selected word and its synonyms on the scatter plot',
+        'points': pca_graph_data,
+    },
+    'tSNE_data': {
+        'title': 'tsNE of BERT token embeddings',
+        'description': 'This graph highlights selected word and its synonyms on the scatter plot',
+        'points': tsne_graph_data,
+    },
+    'scatter_data': {
+        'title': 'Scatter plot of cosine similarities',
+        'description': 'Scatter plot of cosine similarities where X-axis is dataframe indices and Y-axis is similarity',
+        'conclusion': 'Cosine similarity is not a reliable metric for determining homonyms and synonyms from BERT token embeddings',
+        'points': scatter_graph_data,
+    },
+    'Realiability of cosine similarity with #common words': {
+        'title': 'Scatter plot of error with respect to number of common words',
+        'description': 'X-axis is the number of common words in two sentences and Y-axis is the error as measured by the difference from [0,1] values.',
+        'conclusion': 'Cosine similarity fails to detect homonyms when two contexts are too similar',
+        'points': common_word_effect_data,
+    }
 }
 
 with open('rq1.json', 'w') as f:
