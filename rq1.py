@@ -90,6 +90,8 @@ def _scatter():
 
     df['Word1'] = df['Sent1'].apply(lambda x: re.search(r"<b>(.*)</b>",x).group(1))
     df['Word2'] = df['Sent2'].apply(lambda x: re.search(r"<b>(.*)</b>",x).group(1))
+    df['_Sent1'] = df['Sent1'].copy()
+    df['_Sent2'] = df['Sent2'].copy()
     df['Sent1'] = df['Sent1'].apply(lambda x: x.replace("<b>","").replace("</b>",""))
     df['Sent2'] = df['Sent2'].apply(lambda x: x.replace("<b>","").replace("</b>",""))
     df = df[df['Word1'].apply(lambda x: len(x.split()) == 1)]
@@ -131,9 +133,10 @@ df['PCA_X'] = pca_embeddings[:,0]
 df['PCA_Y'] = pca_embeddings[:,1]
 df['tSNE_X'] = tsne_embeddings[:,0]
 df['tSNE_Y'] = tsne_embeddings[:,1]
-pca_graph_data = json.loads(df[['Target','_Sentence','Word','PCA_X','PCA_Y']].to_json(orient='records'))
+df['Synonyms'] = df['Word'].apply(lambda x: synonym_map[x])
+pca_graph_data = json.loads(df[['Target','_Sentence','Word','Synonyms','PCA_X','PCA_Y']].to_json(orient='records'))
 print(json.dumps(pca_graph_data, indent=2))
-tsne_graph_data = json.loads(df[['Target','_Sentence','Word','tSNE_X','tSNE_Y']].to_json(orient='records'))
+tsne_graph_data = json.loads(df[['Target','_Sentence','Word','Synonyms','tSNE_X','tSNE_Y']].to_json(orient='records'))
 print(json.dumps(tsne_graph_data, indent=2))
 
 
@@ -158,6 +161,7 @@ _df = pd.DataFrame({
     'Y':        df_['CoSim'],
     'Size':     df_['Size'],
     'Color':    df_['Color'],
+    'Hover':    df_['_Sent1'] + "<br>" + df_['_Sent2']
 })
 scatter_graph_data = json.loads( _df.to_json(orient='records') )
 print(json.dumps(scatter_graph_data, indent=2))
@@ -167,6 +171,7 @@ _df = pd.DataFrame({
     'Y':        df_['Error'],
     'Size':     5,
     'Color':    df_['Color'],
+    'Hover':    df_['_Sent1'] + "<br>" + df_['_Sent2']
 })
 common_word_effect_data = json.loads( _df.to_json(orient='records') )
 print(json.dumps(common_word_effect_data, indent=2))
