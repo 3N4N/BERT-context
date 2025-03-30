@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BERT Cross-Lingual Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9fafb;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        font-size: 2.2em;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        color: #3498db;
+        font-size: 1.6em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ecf0f1;
+        padding-bottom: 8px;
+      }
+
+      .file-upload {
+        background-color: #e8f4fd;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #load-button {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      #load-button:hover {
+        background-color: #2980b9;
+      }
+
+      .chart {
+        background-color: white;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .main-chart {
+        height: 700px;
+        max-height: 80vh;
+        position: relative;
+      }
+
+      .minor-chart {
+        height: 400px;
+        max-height: 50vh;
+        position: relative;
+      }
+
+      @media (max-width: 768px) {
+        .main-chart {
+          height: 500px;
+        }
+
+        .minor-chart {
+          height: 350px;
+        }
+      }
+
+      .controls {
+        background-color: #f1f8fe;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .control-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+
+      select {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+      }
+
+      .stats {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ecf0f1;
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f6f9;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      tr:hover {
+        background-color: #e8f4fd;
+      }
+
+      .word-pair-detail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .word-pair-detail {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .word-card {
+        flex: 1;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .english-card {
+        background-color: #e8f8ff;
+        border-left: 5px solid #3498db;
+      }
+
+      .spanish-card {
+        background-color: #fff8e8;
+        border-left: 5px solid #f39c12;
+      }
+
+      .connection-metrics {
+        text-align: center;
+        padding: 15px;
+        background-color: #f0f7fb;
+        border-radius: 8px;
+        margin: 15px 0;
+      }
+
+      .similarity-score {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Multilingual BERT Cross-Lingual Analysis: English and Spanish</h1>
+        <p>
+          Evaluating semantic consistency across languages using shared
+          multilingual embeddings
+        </p>
+      </header>
+
+      <div class="file-upload">
+        <input type="file" id="file-input" accept=".json" />
+        <button id="load-button">Load Data</button>
+      </div>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="pair-select">Select Word Pair:</label>
+          <select id="pair-select">
+            <option value="all">All Pairs</option>
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="category-select">Filter by Category:</label>
+          <select id="category-select">
+            <option value="all">All Categories</option>
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Main PCA Visualization -->
+      <div class="chart main-chart">
+        <h2>PCA Visualization of Word Embeddings</h2>
+        <div id="pca-scatter-plot" style="height: 100%"></div>
+      </div>
+
+      <!-- Selected Pair Detail View -->
+      <div id="pair-detail" class="chart" style="display: none">
+        <h2>Word Pair Details</h2>
+        <div class="word-pair-detail">
+          <div class="word-card english-card">
+            <h3 id="english-word">English Word</h3>
+            <p id="english-context">Context sentence...</p>
+          </div>
+
+          <div class="word-card spanish-card">
+            <h3 id="spanish-word">Spanish Word</h3>
+            <p id="spanish-context">Context sentence...</p>
+          </div>
+        </div>
+
+        <div class="connection-metrics">
+          <h3>Cosine Similarity</h3>
+          <div class="similarity-score" id="similarity-value">0.85</div>
+          <p>Category: <span id="pair-category">Synonym</span></p>
+        </div>
+      </div>
+
+      <div class="chart minor-chart">
+        <h2>Cross-lingual Word Similarity by Category</h2>
+        <div id="category-similarity-chart" style="height: 80%"></div>
+      </div>
+
+      <div class="chart minor-chart">
+        <h2>Word Pair Similarities Heatmap</h2>
+        <div id="similarity-heatmap" style="height: 80%"></div>
+      </div>
+
+      <div class="chart">
+        <h2>Word Pairs and Contexts</h2>
+        <div id="word-pairs-table"></div>
+      </div>
+
+      <!-- Statistics moved to bottom -->
+      <div class="stats">
+        <h2>Category Statistics</h2>
+        <div id="category-stats"></div>
+      </div>
+
+      <div class="stats">
+        <h2>Overall Statistics</h2>
+        <div id="overall-stats"></div>
+      </div>
+    </div>
+
+    <script>
+      // Global data variable
+      let globalData = null;
+      let selectedPairIndex = -1;
+
+      // File upload handling
+      document
+        .getElementById("load-button")
+        .addEventListener("click", function () {
+          const fileInput = document.getElementById("file-input");
+          const file = fileInput.files[0];
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              try {
+                const data = JSON.parse(e.target.result);
+                processData(data);
+              } catch (error) {
+                console.error("Error parsing JSON:", error);
+                alert(
+                  "Error parsing the JSON file. Please check the file format."
+                );
+              }
+            };
+            reader.readAsText(file);
+          } else {
+            alert("Please select a JSON file to upload.");
+          }
+        });
+
+      // Try to load default file if available
+      try {
+        fetch("mbert_cross_lingual_analysis.json")
+          .then((response) => response.json())
+          .then((data) => {
+            processData(data);
+          })
+          .catch((error) => {
+            console.log("No default JSON file found. Please upload a file.");
+          });
+      } catch (error) {
+        console.log("Error loading default file:", error);
+      }
+
+      function processData(data) {
+        globalData = data;
+
+        // Populate dropdowns
+        populateDropdowns(data);
+
+        // Display visualizations
+        displayOverallStats(data.overall_stats);
+        displayCategoryStats(data.category_stats);
+        createCategorySimilarityChart(
+          data.visualizations.category_similarity_bar
+        );
+        createPCAScatterPlot(data.visualizations.pca_scatter);
+        createSimilarityHeatmap(data.visualizations.similarity_heatmap);
+        displayWordPairsTable(data.words, data.similarities, data.categories);
+
+        // Setup event listeners for dropdowns
+        setupDropdownListeners();
+      }
+
+      function populateDropdowns(data) {
+        // Populate word pair dropdown
+        const pairSelect = document.getElementById("pair-select");
+        pairSelect.innerHTML = '<option value="all">All Pairs</option>';
+
+        data.words.forEach((pair, index) => {
+          const option = document.createElement("option");
+          option.value = index;
+          option.textContent = `${pair.english} / ${pair.spanish}`;
+          pairSelect.appendChild(option);
+        });
+
+        // Populate category dropdown
+        const categorySelect = document.getElementById("category-select");
+        categorySelect.innerHTML =
+          '<option value="all">All Categories</option>';
+
+        const uniqueCategories = [...new Set(data.categories)];
+        uniqueCategories.forEach((category) => {
+          const option = document.createElement("option");
+          option.value = category;
+          option.textContent = formatCategoryName(category);
+          categorySelect.appendChild(option);
+        });
+      }
+
+      function formatCategoryName(category) {
+        // Convert "homonym_financial" to "Homonym: Financial"
+        return category
+          .replace("_", ": ")
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+      }
+
+      function setupDropdownListeners() {
+        document
+          .getElementById("pair-select")
+          .addEventListener("change", function () {
+            const selectedValue = this.value;
+
+            if (selectedValue === "all") {
+              // Show all pairs
+              selectedPairIndex = -1;
+              document.getElementById("pair-detail").style.display = "none";
+
+              // Redraw PCA with all points
+              createPCAScatterPlot(globalData.visualizations.pca_scatter);
+            } else {
+              // Show selected pair details
+              selectedPairIndex = parseInt(selectedValue);
+              showPairDetails(selectedPairIndex);
+
+              // Highlight the selected pair in the PCA plot
+              highlightPairInPCA(selectedPairIndex);
+            }
+          });
+
+        document
+          .getElementById("category-select")
+          .addEventListener("change", function () {
+            const selectedCategory = this.value;
+
+            // Filter PCA by category
+            filterPCAByCategory(selectedCategory);
+
+            // Reset pair selection if filtering by category
+            if (selectedCategory !== "all") {
+              document.getElementById("pair-select").value = "all";
+              document.getElementById("pair-detail").style.display = "none";
+              selectedPairIndex = -1;
+            }
+          });
+      }
+
+      function showPairDetails(index) {
+        const pairDetail = document.getElementById("pair-detail");
+        pairDetail.style.display = "block";
+
+        const wordPair = globalData.words[index];
+        const similarity = globalData.similarities[index];
+        const category = globalData.categories[index];
+
+        // Update details
+        document.getElementById("english-word").textContent = wordPair.english;
+        document.getElementById("english-context").textContent =
+          wordPair.english_context;
+        document.getElementById("spanish-word").textContent = wordPair.spanish;
+        document.getElementById("spanish-context").textContent =
+          wordPair.spanish_context;
+        document.getElementById("similarity-value").textContent =
+          similarity.toFixed(4);
+        document.getElementById("pair-category").textContent =
+          formatCategoryName(category);
+
+        // Scroll to details
+        pairDetail.scrollIntoView({ behavior: "smooth" });
+      }
+
+      function highlightPairInPCA(index) {
+        // Get the PCA data
+        const pcaData = globalData.visualizations.pca_scatter;
+
+        // Create a filtered version highlighting only the selected pair
+        const highlightedTraces = [];
+
+        // Add background traces with reduced opacity
+        pcaData.data.forEach((trace) => {
+          const backgroundTrace = JSON.parse(JSON.stringify(trace));
+          backgroundTrace.marker.opacity = 0.2;
+          backgroundTrace.textfont = { color: "rgba(0,0,0,0.2)" };
+          highlightedTraces.push(backgroundTrace);
+        });
+
+        // Add highlighted English point
+        highlightedTraces.push({
+          x: [pcaData.data[0].x[index]],
+          y: [pcaData.data[0].y[index]],
+          mode: "markers+text",
+          marker: {
+            size: 15,
+            color: "rgba(31, 119, 180, 1)",
+            line: {
+              width: 2,
+              color: "black",
+            },
+          },
+          text: [pcaData.data[0].text[index]],
+          name: "Selected English",
+          textposition: "top center",
+        });
+
+        // Add highlighted Spanish point
+        highlightedTraces.push({
+          x: [pcaData.data[1].x[index]],
+          y: [pcaData.data[1].y[index]],
+          mode: "markers+text",
+          marker: {
+            size: 15,
+            color: "rgba(255, 127, 14, 1)",
+            symbol: "square",
+            line: {
+              width: 2,
+              color: "black",
+            },
+          },
+          text: [pcaData.data[1].text[index]],
+          name: "Selected Spanish",
+          textposition: "bottom center",
+        });
+
+        // Add connection line
+        highlightedTraces.push({
+          x: [pcaData.data[0].x[index], pcaData.data[1].x[index]],
+          y: [pcaData.data[0].y[index], pcaData.data[1].y[index]],
+          mode: "lines",
+          line: {
+            color: "rgba(0, 0, 0, 1)",
+            width: 3,
+            dash: "dot",
+          },
+          showlegend: false,
+        });
+
+        // Update the plot
+        const layout = {
+          title: "PCA Visualization of Word Embeddings (Highlighted Pair)",
+          xaxis: {
+            title: "PC1",
+          },
+          yaxis: {
+            title: "PC2",
+          },
+          hovermode: "closest",
+          legend: {
+            orientation: "h",
+            yanchor: "bottom",
+            y: -0.2,
+          },
+        };
+
+        Plotly.newPlot("pca-scatter-plot", highlightedTraces, layout);
+      }
+
+      function filterPCAByCategory(category) {
+        if (category === "all") {
+          // Show all categories
+          createPCAScatterPlot(globalData.visualizations.pca_scatter);
+          return;
+        }
+
+        // Get indices of pairs in the selected category
+        const indices = globalData.categories
+          .map((cat, idx) => (cat === category ? idx : -1))
+          .filter((idx) => idx !== -1);
+
+        // Filter traces to only show this category
+        const pcaData = globalData.visualizations.pca_scatter;
+        const filteredTraces = [];
+
+        // English points
+        filteredTraces.push({
+          x: indices.map((idx) => pcaData.data[0].x[idx]),
+          y: indices.map((idx) => pcaData.data[0].y[idx]),
+          mode: "markers+text",
+          marker: {
+            size: 12,
+            color: getColorForCategory(category),
+          },
+          text: indices.map((idx) => pcaData.data[0].text[idx]),
+          name: "English",
+          textposition: "top center",
+        });
+
+        // Spanish points
+        filteredTraces.push({
+          x: indices.map((idx) => pcaData.data[1].x[idx]),
+          y: indices.map((idx) => pcaData.data[1].y[idx]),
+          mode: "markers+text",
+          marker: {
+            size: 12,
+            color: getColorForCategory(category),
+            symbol: "square",
+          },
+          text: indices.map((idx) => pcaData.data[1].text[idx]),
+          name: "Spanish",
+          textposition: "bottom center",
+        });
+
+        // Connection lines
+        for (let i = 0; i < indices.length; i++) {
+          const idx = indices[i];
+          filteredTraces.push({
+            x: [pcaData.data[0].x[idx], pcaData.data[1].x[idx]],
+            y: [pcaData.data[0].y[idx], pcaData.data[1].y[idx]],
+            mode: "lines",
+            line: {
+              color: getColorForCategory(category),
+              width: 1,
+            },
+            showlegend: false,
+            hoverinfo: "none",
+          });
+        }
+
+        // Update the plot
+        const layout = {
+          title: `PCA Visualization - Category: ${formatCategoryName(
+            category
+          )}`,
+          xaxis: {
+            title: "PC1",
+          },
+          yaxis: {
+            title: "PC2",
+          },
+          hovermode: "closest",
+          legend: {
+            orientation: "h",
+            yanchor: "bottom",
+            y: -0.2,
+          },
+        };
+
+        Plotly.newPlot("pca-scatter-plot", filteredTraces, layout);
+      }
+
+      function displayOverallStats(stats) {
+        if (!stats) {
+          document.getElementById("overall-stats").innerHTML =
+            '<div class="error-message">No overall statistics available</div>';
+          return;
+        }
+
+        const statsDiv = document.getElementById("overall-stats");
+
+        // Create a more visually appealing stats display
+        statsDiv.innerHTML = `
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-title">Mean Similarity</div>
+                        <div class="stat-value">${stats.mean_similarity.toFixed(
+                          4
+                        )}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Standard Deviation</div>
+                        <div class="stat-value">${stats.std_similarity.toFixed(
+                          4
+                        )}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Min Similarity</div>
+                        <div class="stat-value">${stats.min_similarity.toFixed(
+                          4
+                        )}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-title">Max Similarity</div>
+                        <div class="stat-value">${stats.max_similarity.toFixed(
+                          4
+                        )}</div>
+                    </div>
+                </div>
+                
+                <style>
+                    .stats-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 15px;
+                        margin-top: 15px;
+                    }
+                    .stat-card {
+                        background: linear-gradient(to bottom right, #ffffff, #f5f9ff);
+                        border-radius: 8px;
+                        padding: 15px;
+                        text-align: center;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                        border: 1px solid #e1e8ed;
+                    }
+                    .stat-title {
+                        color: #5a6474;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .stat-value {
+                        color: #2c3e50;
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                    .error-message {
+                        color: #e74c3c;
+                        text-align: center;
+                        padding: 20px;
+                    }
+                </style>
+            `;
+      }
+
+      function displayCategoryStats(stats) {
+        if (!stats) {
+          document.getElementById("category-stats").innerHTML =
+            '<div class="error-message">No category statistics available</div>';
+          return;
+        }
+
+        const statsDiv = document.getElementById("category-stats");
+
+        // Sort categories by mean similarity (descending)
+        const sortedCategories = Object.entries(stats).sort(
+          (a, b) => b[1].mean_similarity - a[1].mean_similarity
+        );
+
+        let tableHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Mean Similarity</th>
+                            <th>Standard Deviation</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+        for (const [category, categoryStats] of sortedCategories) {
+          // Add color gradient background based on similarity
+          const similarity = categoryStats.mean_similarity;
+          const bgColor = `rgba(33, ${Math.floor(
+            100 + similarity * 155
+          )}, ${Math.floor(200 + similarity * 55)}, 0.1)`;
+
+          tableHTML += `
+                    <tr style="background-color: ${bgColor}">
+                        <td><strong>${formatCategoryName(
+                          category
+                        )}</strong></td>
+                        <td>${categoryStats.mean_similarity.toFixed(4)}</td>
+                        <td>${categoryStats.std_similarity.toFixed(4)}</td>
+                        <td>${categoryStats.count}</td>
+                    </tr>
+                `;
+        }
+
+        tableHTML += `
+                    </tbody>
+                </table>
+                
+                <style>
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        margin-top: 15px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                    }
+                    thead {
+                        background-color: #f2f6f9;
+                    }
+                    th {
+                        padding: 12px;
+                        text-align: left;
+                        border: 1px solid #e1e8ed;
+                        font-weight: bold;
+                    }
+                    td {
+                        padding: 12px;
+                        border: 1px solid #e1e8ed;
+                    }
+                    tbody tr:hover {
+                        background-color: rgba(52, 152, 219, 0.1) !important;
+                    }
+                </style>
+            `;
+
+        statsDiv.innerHTML = tableHTML;
+      }
+
+      function createCategorySimilarityChart(data) {
+        if (!data || !data.x || !data.y || !data.error_y) {
+          console.error("Invalid category similarity data format");
+          // Show error message in plot area
+          document.getElementById("category-similarity-chart").innerHTML =
+            '<div style="padding: 20px; text-align: center;">Error loading category data. Please check the data format.</div>';
+          return;
+        }
+
+        // Sort categories by similarity (descending)
+        const sortedData = {
+          x: [...data.x],
+          y: [...data.y],
+          error_y: [...data.error_y],
+        };
+
+        const indices = sortedData.y.map((_, idx) => idx);
+        indices.sort((a, b) => sortedData.y[b] - sortedData.y[a]);
+
+        sortedData.x = indices.map((i) => formatCategoryName(data.x[i]));
+        sortedData.y = indices.map((i) => data.y[i]);
+        sortedData.error_y = indices.map((i) => data.error_y[i]);
+
+        // Add count of word pairs if available in global data
+        const customdata = [];
+        if (globalData && globalData.category_stats) {
+          for (const i of indices) {
+            const category = data.x[i];
+            const count = globalData.category_stats[category]?.count || "N/A";
+            customdata.push(count);
+          }
+        }
+
+        const trace = {
+          x: sortedData.x,
+          y: sortedData.y,
+          type: "bar",
+          marker: {
+            color: sortedData.y.map((y) => {
+              // Enhanced color gradient based on similarity value
+              return `rgba(33, ${Math.floor(100 + y * 155)}, ${Math.floor(
+                200 + y * 55
+              )}, 0.8)`;
+            }),
+            line: {
+              color: "rgba(25, 25, 25, 0.3)",
+              width: 1,
+            },
+          },
+          error_y: {
+            type: "data",
+            array: sortedData.error_y,
+            visible: true,
+            color: "#444",
+            thickness: 1.5,
+            width: 4,
+          },
+          customdata: customdata,
+          hovertemplate:
+            "<b>%{x}</b><br>Similarity: %{y:.4f}<br>Standard Dev: %{error_y.array:.4f}<br>Word Pairs: %{customdata}<extra></extra>",
+        };
+
+        const layout = {
+          title: {
+            text: "Mean Similarity by Category",
+            font: {
+              size: 18,
+            },
+          },
+          xaxis: {
+            title: "Category",
+            tickangle: -45,
+            automargin: true,
+          },
+          yaxis: {
+            title: "Cosine Similarity",
+            range: [0, 1],
+            tickformat: ".2f",
+          },
+          margin: {
+            b: 150,
+            t: 50,
+            l: 60,
+            r: 30,
+          },
+          plot_bgcolor: "#fafafa",
+          bargap: 0.3,
+          autosize: true,
+        };
+
+        Plotly.newPlot("category-similarity-chart", [trace], layout, {
+          responsive: true,
+        });
+      }
+
+      function createPCAScatterPlot(data) {
+        if (!data || !data.data || !data.data[0] || !data.data[1]) {
+          console.error("Invalid PCA data format");
+          // Show error message in plot area
+          document.getElementById("pca-scatter-plot").innerHTML =
+            '<div style="padding: 20px; text-align: center;">Error loading PCA data. Please check the data format.</div>';
+          return;
+        }
+
+        const traces = data.data;
+
+        // Calculate plot bounds to ensure proper scaling
+        let allX = [...traces[0].x, ...traces[1].x];
+        let allY = [...traces[0].y, ...traces[1].y];
+
+        let xMin = Math.min(...allX);
+        let xMax = Math.max(...allX);
+        let yMin = Math.min(...allY);
+        let yMax = Math.max(...allY);
+
+        // Add some padding to bounds
+        const xPad = (xMax - xMin) * 0.15;
+        const yPad = (yMax - yMin) * 0.15;
+        xMin -= xPad;
+        xMax += xPad;
+        yMin -= yPad;
+        yMax += yPad;
+
+        // Add lines connecting corresponding word pairs
+        const lines = [];
+        for (let i = 0; i < traces[0].x.length; i++) {
+          lines.push({
+            x: [traces[0].x[i], traces[1].x[i]],
+            y: [traces[0].y[i], traces[1].y[i]],
+            mode: "lines",
+            line: {
+              color: getColorForCategory(data.categories[i]),
+              width: 1.5,
+              opacity: 0.7,
+            },
+            showlegend: false,
+            hoverinfo: "none",
+          });
+        }
+
+        // Create colored scatter plots for each category
+        const categories = [...new Set(data.categories)];
+        const categoryTraces = [];
+
+        for (const category of categories) {
+          const enIndices = data.categories
+            .map((cat, idx) => (cat === category ? idx : -1))
+            .filter((idx) => idx !== -1);
+          const esIndices = enIndices;
+
+          // Get similarity information for hover
+          const similarityInfo = enIndices.map((idx) => {
+            if (globalData && globalData.similarities) {
+              return globalData.similarities[idx].toFixed(4);
+            }
+            return "N/A";
+          });
+
+          categoryTraces.push({
+            x: enIndices.map((idx) => traces[0].x[idx]),
+            y: enIndices.map((idx) => traces[0].y[idx]),
+            mode: "markers+text",
+            marker: {
+              size: 12,
+              color: getColorForCategory(category),
+              line: {
+                color: "white",
+                width: 1,
+              },
+            },
+            text: enIndices.map((idx) => traces[0].text[idx]),
+            name: `English (${formatCategoryName(category)})`,
+            textposition: "top center",
+            textfont: {
+              size: 11,
+            },
+            hovertemplate:
+              "<b>%{text}</b><br>Category: " +
+              formatCategoryName(category) +
+              "<br>Similarity: %{customdata}<extra></extra>",
+            customdata: similarityInfo,
+          });
+
+          categoryTraces.push({
+            x: esIndices.map((idx) => traces[1].x[idx]),
+            y: esIndices.map((idx) => traces[1].y[idx]),
+            mode: "markers+text",
+            marker: {
+              size: 12,
+              color: getColorForCategory(category),
+              symbol: "square",
+              line: {
+                color: "white",
+                width: 1,
+              },
+            },
+            text: esIndices.map((idx) => traces[1].text[idx]),
+            name: `Spanish (${formatCategoryName(category)})`,
+            textposition: "bottom center",
+            textfont: {
+              size: 11,
+            },
+            hovertemplate:
+              "<b>%{text}</b><br>Category: " +
+              formatCategoryName(category) +
+              "<br>Similarity: %{customdata}<extra></extra>",
+            customdata: similarityInfo,
+          });
+        }
+
+        const layout = {
+          title: {
+            text: "PCA Visualization of Multilingual BERT Word Embeddings",
+            font: {
+              size: 20,
+            },
+          },
+          xaxis: {
+            title: "Principal Component 1",
+            zeroline: true,
+            zerolinecolor: "#aaa",
+            gridcolor: "#eee",
+            range: [xMin, xMax],
+          },
+          yaxis: {
+            title: "Principal Component 2",
+            zeroline: true,
+            zerolinecolor: "#aaa",
+            gridcolor: "#eee",
+            range: [yMin, yMax],
+          },
+          hovermode: "closest",
+          legend: {
+            orientation: "h",
+            yanchor: "bottom",
+            y: -0.2,
+            xanchor: "center",
+            x: 0.5,
+            font: {
+              size: 11,
+            },
+            itemsizing: "constant",
+          },
+          margin: {
+            l: 60,
+            r: 50,
+            t: 50,
+            b: 150,
+          },
+          plot_bgcolor: "#fafafa",
+          annotations: [
+            {
+              x: 0,
+              y: 0,
+              xref: "paper",
+              yref: "paper",
+              text: "Connected lines show corresponding word pairs<br>◯ = English, □ = Spanish",
+              showarrow: false,
+              font: {
+                size: 12,
+                color: "#666",
+              },
+              xanchor: "left",
+              yanchor: "bottom",
+              x: 0.01,
+              y: 0.01,
+              bgcolor: "rgba(255,255,255,0.7)",
+              borderpad: 4,
+            },
+          ],
+          autosize: true,
+        };
+
+        Plotly.newPlot(
+          "pca-scatter-plot",
+          [...lines, ...categoryTraces],
+          layout,
+          { responsive: true }
+        );
+
+        // Add click event to highlight pairs
+        const pcaPlot = document.getElementById("pca-scatter-plot");
+        pcaPlot.on("plotly_click", function (data) {
+          const pointIndex = data.points[0].pointIndex;
+          const curveNumber = data.points[0].curveNumber;
+
+          // Get the pair index
+          let pairIndex;
+          if (curveNumber >= lines.length) {
+            // We clicked on a point from categoryTraces
+            const categoryIndex = Math.floor((curveNumber - lines.length) / 2);
+            const isEnglish = (curveNumber - lines.length) % 2 === 0;
+
+            const category = categories[categoryIndex];
+            const indices = data.categories
+              .map((cat, idx) => (cat === category ? idx : -1))
+              .filter((idx) => idx !== -1);
+            pairIndex = indices[pointIndex];
+          } else {
+            // We clicked on a line, do nothing
+            return;
+          }
+
+          // Update the dropdown and show details
+          document.getElementById("pair-select").value = pairIndex;
+          selectedPairIndex = pairIndex;
+          showPairDetails(pairIndex);
+          highlightPairInPCA(pairIndex);
+        });
+      }
+
+      function createSimilarityHeatmap(data) {
+        if (!data || !data.z || !data.x) {
+          console.error("Invalid heatmap data format");
+          // Show error message in plot area
+          document.getElementById("similarity-heatmap").innerHTML =
+            '<div style="padding: 20px; text-align: center;">Error loading heatmap data. Please check the data format.</div>';
+          return;
+        }
+
+        // Sort by similarity value
+        const sortedIndices = Array.from(Array(data.z.length).keys()).sort(
+          (a, b) => data.z[b] - data.z[a]
+        );
+
+        const sortedZ = sortedIndices.map((i) => data.z[i]);
+
+        // Shorten x labels to prevent overlap
+        const sortedX = sortedIndices.map((i) => {
+          const label = data.x[i];
+          // Extract just the words for display
+          if (label.includes("/")) {
+            const [en, es] = label.split("/");
+            return `${en.trim()}/${es.trim()}`;
+          }
+          return label;
+        });
+
+        // Get category information for hover if available
+        const hoverCategories = [];
+        if (globalData && globalData.categories) {
+          for (const idx of sortedIndices) {
+            const pairIndex = globalData.words.findIndex(
+              (pair, i) => `${pair.english}/${pair.spanish}` === data.x[idx]
+            );
+
+            if (pairIndex !== -1) {
+              hoverCategories.push(
+                formatCategoryName(globalData.categories[pairIndex])
+              );
+            } else {
+              hoverCategories.push("Unknown");
+            }
+          }
+        }
+
+        const trace = {
+          z: [sortedZ],
+          x: sortedX,
+          y: ["Similarity"],
+          type: "heatmap",
+          colorscale: [
+            [0, "rgb(247, 251, 255)"], // Very light blue
+            [0.3, "rgb(198, 219, 239)"], // Light blue
+            [0.6, "rgb(107, 174, 214)"], // Medium blue
+            [0.8, "rgb(33, 113, 181)"], // Darker blue
+            [1, "rgb(8, 48, 107)"], // Deep blue
+          ],
+          colorbar: {
+            title: {
+              text: "Similarity",
+              side: "right",
+            },
+            thickness: 15,
+            len: 0.9,
+            tickformat: ".2f",
+          },
+          hovertemplate:
+            "<b>%{x}</b><br>Similarity: %{z:.4f}" +
+            (hoverCategories.length ? "<br>Category: %{customdata}" : "") +
+            "<extra></extra>",
+          customdata: hoverCategories,
+        };
+
+        const layout = {
+          title: {
+            text: "Word Pair Similarities (Sorted by Value)",
+            font: {
+              size: 18,
+            },
+          },
+          xaxis: {
+            title: "Word Pairs (English/Spanish)",
+            tickangle: -45,
+            automargin: true,
+            tickfont: {
+              size: 10,
+            },
+          },
+          margin: {
+            b: 150,
+            t: 50,
+            l: 60,
+            r: 80,
+          },
+          autosize: true,
+        };
+
+        Plotly.newPlot("similarity-heatmap", [trace], layout, {
+          responsive: true,
+        });
+
+        // Add click event to select pair
+        const heatmapPlot = document.getElementById("similarity-heatmap");
+        heatmapPlot.on("plotly_click", function (data) {
+          const pairLabel = data.points[0].x;
+          const pairIndex = globalData.words.findIndex(
+            (pair, idx) => `${pair.english}/${pair.spanish}` === pairLabel
+          );
+
+          if (pairIndex !== -1) {
+            document.getElementById("pair-select").value = pairIndex;
+            selectedPairIndex = pairIndex;
+            showPairDetails(pairIndex);
+            highlightPairInPCA(pairIndex);
+          }
+        });
+      }
+
+      function displayWordPairsTable(words, similarities, categories) {
+        const tableDiv = document.getElementById("word-pairs-table");
+        let tableHTML = `
+                <table>
+                    <tr>
+                        <th>English Word</th>
+                        <th>Spanish Word</th>
+                        <th>English Context</th>
+                        <th>Spanish Context</th>
+                        <th>Category</th>
+                        <th>Similarity</th>
+                    </tr>
+            `;
+
+        // Sort by similarity (descending)
+        const indices = Array.from(Array(similarities.length).keys()).sort(
+          (a, b) => similarities[b] - similarities[a]
+        );
+
+        for (const idx of indices) {
+          tableHTML += `
+                    <tr data-index="${idx}" class="pair-row">
+                        <td>${words[idx].english}</td>
+                        <td>${words[idx].spanish}</td>
+                        <td>${words[idx].english_context}</td>
+                        <td>${words[idx].spanish_context}</td>
+                        <td>${formatCategoryName(categories[idx])}</td>
+                        <td>${similarities[idx].toFixed(4)}</td>
+                    </tr>
+                `;
+        }
+
+        tableHTML += "</table>";
+        tableDiv.innerHTML = tableHTML;
+
+        // Add click event to rows
+        setTimeout(() => {
+          const rows = document.querySelectorAll(".pair-row");
+          rows.forEach((row) => {
+            row.addEventListener("click", function () {
+              const pairIndex = parseInt(this.getAttribute("data-index"));
+              document.getElementById("pair-select").value = pairIndex;
+              selectedPairIndex = pairIndex;
+              showPairDetails(pairIndex);
+              highlightPairInPCA(pairIndex);
+            });
+          });
+        }, 100);
+      }
+
+      function getColorForCategory(category) {
+        const colors = {
+          synonym: "rgb(31, 119, 180)",
+          homonym_financial: "rgb(255, 127, 14)",
+          homonym_riverside: "rgb(214, 39, 40)",
+          homonym_illumination: "rgb(44, 160, 44)",
+          homonym_weight: "rgb(148, 103, 189)",
+          homonym_season: "rgb(140, 86, 75)",
+          homonym_coil: "rgb(227, 119, 194)",
+          homonym_animal: "rgb(127, 127, 127)",
+          homonym_sports: "rgb(188, 189, 34)",
+          homonym_reading: "rgb(23, 190, 207)",
+          homonym_reserve: "rgb(174, 199, 232)",
+        };
+
+        return colors[category] || "rgb(0, 0, 0)";
+      }
+    </script>
+  </body>
+</html>
