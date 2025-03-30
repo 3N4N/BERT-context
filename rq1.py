@@ -171,6 +171,22 @@ _df = pd.DataFrame({
 common_word_effect_data = json.loads( _df.to_json(orient='records') )
 print(json.dumps(common_word_effect_data, indent=2))
 
+df_[(df_['Synonym']=='T') & (df_['CoSim'] < 0.4)]
+df_[(df_['Synonym']=='F') & (df_['CoSim'] > 0.7)]
+
+df_outliers = {}
+df_outliers['T'] = df_[(df_['Synonym']=='T') & (df_['CoSim'] < 0.4)]
+df_outliers['F'] = df_[(df_['Synonym']=='F') & (df_['CoSim'] > 0.7)]
+
+df_outliers['T'] = df_outliers['T'][[ 'Sent1', 'Sent2', 'Word1', 'Word2', 'CoSim' ]]
+df_outliers['F'] = df_outliers['F'][[ 'Sent1', 'Sent2', 'Word1', 'Word2', 'CoSim' ]]
+
+outliers_data = {}
+outliers_data['T'] = json.loads(df_outliers['T'].to_json(orient='columns'))
+print(json.dumps(outliers_data['T'], indent=2))
+outliers_data['F'] = json.loads(df_outliers['F'].to_json(orient='columns'))
+print(json.dumps(outliers_data['F'], indent=2))
+
 
 json_data = {
     'similarity scores': cosim_data,
@@ -195,8 +211,12 @@ json_data = {
         'description': 'X-axis is the number of common words in two sentences and Y-axis is the error as measured by the difference from [0,1] values.',
         'conclusion': 'Cosine similarity fails to detect homonyms when two contexts are too similar',
         'points': common_word_effect_data,
-    }
+    },
+    'Outliers Table': {
+        'Synonyms': outliers_data['T'],
+        'Homonyms': outliers_data['F'],
+    },
 }
 
 with open('rq1.json', 'w') as f:
-    json.dump(json_data, f)
+    json.dump(json_data, f, indent=2)
