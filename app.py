@@ -29,16 +29,6 @@ app.layout = html.Div([
             id='graph',
         ),
         html.Div(children=[
-            # html.Div(children=[
-            #     html.Div(
-            #         "Sentence",
-            #         className='sentence',
-            #     ),
-            #     html.Div(
-            #         "Word",
-            #         className='word',
-            #     ),
-            # ], className='sentence-word',),
             html.Div(children=[
                 html.Label("Sentence", id='sentence-label'),
                 html.Label("Word", id='word-label'),
@@ -126,8 +116,8 @@ def update_graph(sentence1,sentence2,sentence3,word1,word2,word3):
     _x1,_y1, x3,y3 = viz.get_vector_points(vec0[:cutoff],vec2[:cutoff])
 
     fig.add_trace(go.Scatter(x=x1, y=y1, mode='markers', marker=dict(size=5, color='black'),    name=word1))
-    fig.add_trace(go.Scatter(x=x2, y=y2, mode='markers', marker=dict(size=5, color='blue'),     name=word2))
     fig.add_trace(go.Scatter(x=x3, y=y3, mode='markers', marker=dict(size=5, color='red'),      name=word3))
+    fig.add_trace(go.Scatter(x=x2, y=y2, mode='markers', marker=dict(size=5, color='blue'),     name=word2))
 
     line_x = []
     line_y = []
