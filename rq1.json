@@ -1,0 +1,6996 @@
+{
+  "similarity scores": {
+    "synonym": {
+      "min": 0.14924561977386475,
+      "max": 0.9305483102798462,
+      "avg": 0.568729419855104,
+      "std": 0.16320963382720102
+    },
+    "homonym": {
+      "min": 0.03610879182815552,
+      "max": 0.9999998211860657,
+      "avg": 0.40410563226753066,
+      "std": 0.16773812484348363
+    }
+  },
+  "PCA_data": {
+    "title": "PCA of BERT token embeddings",
+    "description": "This graph highlights selected word and its synonyms on the scatter plot",
+    "points": [
+      {
+        "Target": "nail",
+        "_Sentence": "A mirror hung on a <b>nail</b> above the washstand.",
+        "Word": "nail",
+        "PCA_X": -2.4839154091,
+        "PCA_Y": -2.16776565
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "Keep your <b>nails</b> short and your hands clean.",
+        "Word": "nails",
+        "PCA_X": -2.3680201123,
+        "PCA_Y": -7.1951807773
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "I thought I felt a <b>drop</b> of rain.",
+        "Word": "drop",
+        "PCA_X": -3.3433857043,
+        "PCA_Y": -1.4097874108
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "Temperatures can <b>drop</b> to freezing at night.",
+        "Word": "drop",
+        "PCA_X": -2.828397649,
+        "PCA_Y": 1.2770131768
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "As we headed back to London, the <b>coach</b> was badly delayed by roadworks.",
+        "Word": "coach",
+        "PCA_X": -0.5871654925,
+        "PCA_Y": 2.8222147742
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "We're going to the airport by <b>coach</b>.",
+        "Word": "coach",
+        "PCA_X": 8.6455485542,
+        "PCA_Y": 0.8938044193
+      },
+      {
+        "Target": "hand",
+        "_Sentence": "He wiped his sweaty <b>hand</b>.",
+        "Word": "hand",
+        "PCA_X": 4.4738153912,
+        "PCA_Y": -1.7490621526
+      },
+      {
+        "Target": "hand",
+        "_Sentence": "I put my <b>hand</b> into my pocket and pulled out the letter.",
+        "Word": "hand",
+        "PCA_X": -1.7462729506,
+        "PCA_Y": 0.2445827351
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "She had long red <b>fingernails</b>.",
+        "Word": "fingernails",
+        "PCA_X": 6.1082840572,
+        "PCA_Y": -4.5262579517
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "That man was appointed as the new <b>coach</b>.",
+        "Word": "coach",
+        "PCA_X": 5.8276345685,
+        "PCA_Y": 3.3234450892
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "She has recently joined the amateur team as <b>coach</b>.",
+        "Word": "coach",
+        "PCA_X": 3.7921158658,
+        "PCA_Y": 2.9354576273
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "Please stop biting your <b>nails</b>!",
+        "Word": "nails",
+        "PCA_X": 6.1327860421,
+        "PCA_Y": -3.9292002501
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "I <b>duck</b> the head to hide my admiration.",
+        "Word": "duck",
+        "PCA_X": -2.2586144307,
+        "PCA_Y": -0.0852954304
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "Chickens and <b>ducks</b> scratch around the outbuildings.",
+        "Word": "ducks",
+        "PCA_X": -2.2266016394,
+        "PCA_Y": -5.3646086425
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "His blood pressure had <b>dropped</b> severely.",
+        "Word": "dropped",
+        "PCA_X": -1.34273774,
+        "PCA_Y": 0.7504177213
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "The cat wants to <b>spring</b> onto the sofa.",
+        "Word": "spring",
+        "PCA_X": -2.6397501756,
+        "PCA_Y": -0.3143116154
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "Throwing back the sheet, he <b>springs</b> from the bed.",
+        "Word": "springs",
+        "PCA_X": -2.3921114209,
+        "PCA_Y": -1.6343941365
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "He bought her an emerald <b>ring</b>.",
+        "Word": "ring",
+        "PCA_X": 3.7198672626,
+        "PCA_Y": -0.3231247463
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "I would <b>ring</b> when I got back to the hotel.",
+        "Word": "ring",
+        "PCA_X": -1.050505702,
+        "PCA_Y": 2.5143270819
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "Pass me those two <b>leads</b> please.",
+        "Word": "leads",
+        "PCA_X": -1.6707342683,
+        "PCA_Y": 0.1392428355
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "His goal gave them a two-goal <b>lead</b> once more time.",
+        "Word": "lead",
+        "PCA_X": -1.4506191274,
+        "PCA_Y": 6.969254916
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "Keep your <b>fingernails</b> short and your hands clean.",
+        "Word": "fingernails",
+        "PCA_X": -2.2572835094,
+        "PCA_Y": -6.8651345466
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "He hammered the <b>nail</b> into the branch.",
+        "Word": "nail",
+        "PCA_X": -2.0276050894,
+        "PCA_Y": -1.1375163324
+      },
+      {
+        "Target": "match",
+        "_Sentence": "It would be difficult to <b>match</b> the service this airline gives its customers.",
+        "Word": "match",
+        "PCA_X": -2.409123557,
+        "PCA_Y": 3.0089579096
+      },
+      {
+        "Target": "match",
+        "_Sentence": "You should always strike a <b>match</b> away from you.",
+        "Word": "match",
+        "PCA_X": -1.9889159741,
+        "PCA_Y": 1.4423272449
+      },
+      {
+        "Target": "match",
+        "_Sentence": "He was watching a football <b>match</b>.",
+        "Word": "match",
+        "PCA_X": 7.0527781865,
+        "PCA_Y": 1.4325500868
+      },
+      {
+        "Target": "bus",
+        "_Sentence": "We're going to the airport by <b>bus</b>.",
+        "Word": "bus",
+        "PCA_X": 9.0072039791,
+        "PCA_Y": 0.4923335991
+      },
+      {
+        "Target": "bus",
+        "_Sentence": "They had to travel everywhere by <b>bus</b>.",
+        "Word": "bus",
+        "PCA_X": 9.1120455884,
+        "PCA_Y": 0.0130086772
+      },
+      {
+        "Target": "bat",
+        "_Sentence": "She showed me how to hold the <b>bat</b>.",
+        "Word": "bat",
+        "PCA_X": 6.2151355771,
+        "PCA_Y": -0.7478162029
+      },
+      {
+        "Target": "bat",
+        "_Sentence": "Due to their physiology, <b>bats</b> are one type of animal that acts as a natural reservoir of many pathogens.",
+        "Word": "bats",
+        "PCA_X": -2.3937536657,
+        "PCA_Y": -2.8683015734
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "He <b>ducked</b> in time to save his head from a blow from the poker.",
+        "Word": "ducked",
+        "PCA_X": -2.5574341689,
+        "PCA_Y": 0.6228160514
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "I used to work in the local branch of a large <b>bank</b>.",
+        "Word": "bank",
+        "PCA_X": 8.4155707258,
+        "PCA_Y": 0.1304560509
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "Which <b>bank</b> offers you the service that best suits your financial needs?",
+        "Word": "bank",
+        "PCA_X": -1.6355046583,
+        "PCA_Y": 0.2094601624
+      },
+      {
+        "Target": "match",
+        "_Sentence": "Do you really think our team has a chance of <b>matching</b> their score?",
+        "Word": "matching",
+        "PCA_X": -2.1474624228,
+        "PCA_Y": 2.6772784441
+      },
+      {
+        "Target": "match",
+        "_Sentence": "They bough two boxes of <b>matches</b>.",
+        "Word": "matches",
+        "PCA_X": 3.5429284304,
+        "PCA_Y": 0.5119493493
+      },
+      {
+        "Target": "match",
+        "_Sentence": "Chelsea have a <b>match</b> with United next week.",
+        "Word": "match",
+        "PCA_X": -0.9223896259,
+        "PCA_Y": 4.1108818004
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "A <b>spring</b> popped out of the watch.",
+        "Word": "spring",
+        "PCA_X": -1.671868288,
+        "PCA_Y": -0.8325959649
+      },
+      {
+        "Target": "band",
+        "_Sentence": "They were probably the most famous <b>band</b> in the world.",
+        "Word": "band",
+        "PCA_X": -1.6345363149,
+        "PCA_Y": 1.2316841383
+      },
+      {
+        "Target": "band",
+        "_Sentence": "A <b>band</b> of light glowed in the space between floor and door.",
+        "Word": "band",
+        "PCA_X": -2.7630201716,
+        "PCA_Y": 1.3977092364
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "When we reached the opposite <b>bank</b>, the boat was sinking fast.",
+        "Word": "bank",
+        "PCA_X": -1.7382330567,
+        "PCA_Y": 0.4958282145
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "The children pelted down the <b>bank</b>, over the bridge and along the path.",
+        "Word": "bank",
+        "PCA_X": -1.2750262142,
+        "PCA_Y": -0.9182783019
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "Add the cream a few <b>drops</b> at a time..",
+        "Word": "drops",
+        "PCA_X": -3.035267635,
+        "PCA_Y": -2.2373089129
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "I listen to country and <b>rock</b>.",
+        "Word": "rock",
+        "PCA_X": 8.4749346797,
+        "PCA_Y": -1.5630036787
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "She once told an interviewer that they didn't even like <b>rock</b> music.",
+        "Word": "rock",
+        "PCA_X": -0.9046796553,
+        "PCA_Y": -0.444496198
+      },
+      {
+        "Target": "equal",
+        "_Sentence": "We raised a lot of money last year and we're hoping to <b>equal</b> that this year.",
+        "Word": "equal",
+        "PCA_X": -2.2087019054,
+        "PCA_Y": 3.0215053363
+      },
+      {
+        "Target": "equal",
+        "_Sentence": "It would be difficult to <b>equal</b> the service this airline gives its customers.",
+        "Word": "equal",
+        "PCA_X": -2.4921211855,
+        "PCA_Y": 2.6819564944
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "Huge waves crashed against the <b>rocks</b>.",
+        "Word": "rocks",
+        "PCA_X": 4.3090280936,
+        "PCA_Y": -2.8429697265
+      },
+      {
+        "Target": "beads",
+        "_Sentence": "He wiped away the <b>beads</b> of sweat on his forehead.",
+        "Word": "beads",
+        "PCA_X": -4.3843765623,
+        "PCA_Y": -4.8787714543
+      },
+      {
+        "Target": "beads",
+        "_Sentence": "Add the cream a few <b>beads</b> at a time..",
+        "Word": "beads",
+        "PCA_X": -3.4659750842,
+        "PCA_Y": -2.6525279747
+      },
+      {
+        "Target": "stick",
+        "_Sentence": "She showed me how to hold the <b>stick</b>.",
+        "Word": "stick",
+        "PCA_X": 6.0788966452,
+        "PCA_Y": -0.0413629101
+      },
+      {
+        "Target": "stick",
+        "_Sentence": "Unlike a baseball <b>stick</b> a cricket one has an edge which is significantly sharper.",
+        "Word": "stick",
+        "PCA_X": -1.5400706141,
+        "PCA_Y": 0.5765784282
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "I <b>ring</b> home once a week to tell my parents I'm okay.",
+        "Word": "ring",
+        "PCA_X": -1.6805098156,
+        "PCA_Y": 2.4572045626
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "Both <b>springs</b> in the fuel pump were broken.",
+        "Word": "springs",
+        "PCA_X": -1.8389856243,
+        "PCA_Y": -1.354418519
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "They now have a <b>lead</b> of 28 points.",
+        "Word": "lead",
+        "PCA_X": -1.2281729088,
+        "PCA_Y": 7.1966023507
+      },
+      {
+        "Target": "phoned",
+        "_Sentence": "She <b>phoned</b> just after lunch.",
+        "Word": "phoned",
+        "PCA_X": -1.2150387137,
+        "PCA_Y": 1.3269919174
+      },
+      {
+        "Target": "phoned",
+        "_Sentence": "I would <b>phone</b> when I got back to the hotel.",
+        "Word": "phone",
+        "PCA_X": -0.9762385491,
+        "PCA_Y": 2.4027404554
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "The island has long golden beaches fringed by <b>palm</b> trees.",
+        "Word": "palm",
+        "PCA_X": -1.8745202792,
+        "PCA_Y": -4.7118999593
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "He wiped his sweaty <b>palm</b>.",
+        "Word": "palm",
+        "PCA_X": 8.0401576222,
+        "PCA_Y": -2.3131235122
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "They met again in the <b>spring</b> of 1977.",
+        "Word": "spring",
+        "PCA_X": -1.0051083208,
+        "PCA_Y": -0.5068295271
+      },
+      {
+        "Target": "Chiropterans",
+        "_Sentence": "<b>Chiropterans</b> are more manoeuvrable than birds.",
+        "Word": "Chiropterans",
+        "PCA_X": -1.7516585396,
+        "PCA_Y": -1.9769779621
+      },
+      {
+        "Target": "Chiropterans",
+        "_Sentence": "Any mammal, of the order <b>Chiroptera</b>, that has forelimbs modified to form wings.",
+        "Word": "Chiroptera",
+        "PCA_X": -2.5686360636,
+        "PCA_Y": -1.9725347654
+      },
+      {
+        "Target": "strip",
+        "_Sentence": "A <b>strip</b> of light glowed in the space between floor and door.",
+        "Word": "strip",
+        "PCA_X": -3.2777335699,
+        "PCA_Y": 1.2906943793
+      },
+      {
+        "Target": "strip",
+        "_Sentence": "Serve dish with <b>strips</b> of fresh raw vegetables.",
+        "Word": "strips",
+        "PCA_X": -2.2070785605,
+        "PCA_Y": -0.4120498705
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "I'm looking at a <b>ring</b> with a jewel attached to it.",
+        "Word": "ring",
+        "PCA_X": -2.3379753018,
+        "PCA_Y": -0.4678621263
+      },
+      {
+        "Target": "ruler",
+        "_Sentence": "The country was without a <b>ruler</b> after the queen died.",
+        "Word": "ruler",
+        "PCA_X": -2.5111735194,
+        "PCA_Y": 1.3194000005
+      },
+      {
+        "Target": "ruler",
+        "_Sentence": "The current <b>ruler</b> is concentrating all power in his own hands. ",
+        "Word": "ruler",
+        "PCA_X": -2.132912227,
+        "PCA_Y": 1.0318157143
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "We planted bulbs to flower in <b>spring</b>.",
+        "Word": "spring",
+        "PCA_X": 7.0657898952,
+        "PCA_Y": -1.1587247988
+      },
+      {
+        "Target": "potentates",
+        "_Sentence": "Colonial rulers groomed and paid local <b>potentates</b>.",
+        "Word": "potentates",
+        "PCA_X": -0.8627470643,
+        "PCA_Y": -0.1363683717
+      },
+      {
+        "Target": "potentates",
+        "_Sentence": "The country was without a <b>potentate</b> after the queen died.",
+        "Word": "potentate",
+        "PCA_X": -2.7528361633,
+        "PCA_Y": 1.3613216125
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "Cherry trees bloom in the <b>springtime</b>.",
+        "Word": "springtime",
+        "PCA_X": 3.5184314228,
+        "PCA_Y": -2.2255847214
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "We planted bulbs to flower in <b>springtime</b>.",
+        "Word": "springtime",
+        "PCA_X": 3.2809813182,
+        "PCA_Y": -1.6475773383
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "This tiny device fits into the <b>palm</b> of your hand.",
+        "Word": "palm",
+        "PCA_X": -2.3343283281,
+        "PCA_Y": -0.8167563154
+      },
+      {
+        "Target": "ruler",
+        "_Sentence": "Most <b>rulers</b> work by having numbers and little lines.",
+        "Word": "rulers",
+        "PCA_X": -2.268221926,
+        "PCA_Y": 0.196939555
+      },
+      {
+        "Target": "bat",
+        "_Sentence": "I accidentally bashed him with my <b>bat</b>.",
+        "Word": "bat",
+        "PCA_X": 6.0972933221,
+        "PCA_Y": -0.7867702107
+      },
+      {
+        "Target": "game",
+        "_Sentence": "A <b>game</b> consists of two halves lasting 45 minutes, meaning it is 90 minutes long.",
+        "Word": "game",
+        "PCA_X": -1.0473701813,
+        "PCA_Y": 4.1146960787
+      },
+      {
+        "Target": "game",
+        "_Sentence": "He was watching a football <b>game</b>.",
+        "Word": "game",
+        "PCA_X": 5.8521111538,
+        "PCA_Y": 1.7501640871
+      },
+      {
+        "Target": "drakes",
+        "_Sentence": "The <b>drakes</b> started quacking loudly when we threw them some bread.",
+        "Word": "drakes",
+        "PCA_X": -1.8028398813,
+        "PCA_Y": -0.595646203
+      },
+      {
+        "Target": "drakes",
+        "_Sentence": "A lone <b>drake</b> sat by the edge of the pond.",
+        "Word": "drake",
+        "PCA_X": -1.6430261534,
+        "PCA_Y": -1.6361195174
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "She picked up a <b>rock</b> and threw it into the trees.",
+        "Word": "rock",
+        "PCA_X": -1.9109628499,
+        "PCA_Y": -1.5864687065
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "More than two-thirds of <b>palms</b> live in tropical forests.",
+        "Word": "palms",
+        "PCA_X": -1.9498716635,
+        "PCA_Y": -5.3508720153
+      },
+      {
+        "Target": "lower",
+        "_Sentence": "I <b>lower</b> the head to hide my admiration.",
+        "Word": "lower",
+        "PCA_X": -2.451446797,
+        "PCA_Y": 0.533263766
+      },
+      {
+        "Target": "lower",
+        "_Sentence": "She <b>lowered</b> her gaze to the hands in her lap.",
+        "Word": "lowered",
+        "PCA_X": -2.9051624991,
+        "PCA_Y": -0.8722271094
+      },
+      {
+        "Target": "band",
+        "_Sentence": "A narrow <b>band</b> of grass separated the greenhouse from the vegetable garden.",
+        "Word": "band",
+        "PCA_X": -2.4763813595,
+        "PCA_Y": 1.0344519826
+      },
+      {
+        "Target": "tack",
+        "_Sentence": "A mirror hung on a <b>tack</b> above the washstand.",
+        "Word": "tack",
+        "PCA_X": -2.7554526493,
+        "PCA_Y": -0.4150377228
+      },
+      {
+        "Target": "tack",
+        "_Sentence": "He fixed it with three <b>tacks</b>.",
+        "Word": "tacks",
+        "PCA_X": 2.0432071197,
+        "PCA_Y": -0.7430777081
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "She lifted the <b>lead</b> again.",
+        "Word": "lead",
+        "PCA_X": -1.210562458,
+        "PCA_Y": 2.3254041131
+      },
+      {
+        "Target": "band",
+        "_Sentence": "This week the <b>band</b> did the last gig of their tour.",
+        "Word": "band",
+        "PCA_X": -1.7621472028,
+        "PCA_Y": 1.4963809586
+      },
+      {
+        "Target": "ensemble",
+        "_Sentence": "He has also formed an exciting <b>ensemble</b> with several other musicians.",
+        "Word": "ensemble",
+        "PCA_X": -2.8058049358,
+        "PCA_Y": 1.3253764911
+      },
+      {
+        "Target": "ensemble",
+        "_Sentence": "They were probably the most famous <b>ensemble</b> in the world.",
+        "Word": "ensemble",
+        "PCA_X": -2.2416802613,
+        "PCA_Y": 1.0457930194
+      },
+      {
+        "Target": "trainer",
+        "_Sentence": "That man was appointed as the new <b>trainer</b>.",
+        "Word": "trainer",
+        "PCA_X": 3.0955136451,
+        "PCA_Y": 1.8949937436
+      },
+      {
+        "Target": "trainer",
+        "_Sentence": "They need a new <b>trainer</b> for the young athletes.",
+        "Word": "trainer",
+        "PCA_X": -0.9651090469,
+        "PCA_Y": 1.8175422763
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "The <b>ducks</b> started quacking loudly when we threw them some bread.",
+        "Word": "ducks",
+        "PCA_X": -1.7215638703,
+        "PCA_Y": -4.9305957862
+      },
+      {
+        "Target": "advantage",
+        "_Sentence": "They now have an <b>advantage</b> of 28 points.",
+        "Word": "advantage",
+        "PCA_X": -1.563104399,
+        "PCA_Y": 7.5426352824
+      },
+      {
+        "Target": "advantage",
+        "_Sentence": "The player who scores the next point after deuce has the <b>advantage</b>.",
+        "Word": "advantage",
+        "PCA_X": 3.9861054654,
+        "PCA_Y": 6.1993399658
+      },
+      {
+        "Target": "stone",
+        "_Sentence": "Use that <b>stone</b> there to hold the door open.",
+        "Word": "stone",
+        "PCA_X": -2.0604693669,
+        "PCA_Y": -0.69207498
+      },
+      {
+        "Target": "stone",
+        "_Sentence": "She picked up a <b>stone</b> and threw it into the trees.",
+        "Word": "stone",
+        "PCA_X": -1.9491523804,
+        "PCA_Y": -1.5521236255
+      }
+    ]
+  },
+  "tSNE_data": {
+    "title": "tsNE of BERT token embeddings",
+    "description": "This graph highlights selected word and its synonyms on the scatter plot",
+    "points": [
+      {
+        "Target": "nail",
+        "_Sentence": "A mirror hung on a <b>nail</b> above the washstand.",
+        "Word": "nail",
+        "tSNE_X": 2.1932725906,
+        "tSNE_Y": 3.5382857323
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "Keep your <b>nails</b> short and your hands clean.",
+        "Word": "nails",
+        "tSNE_X": 2.3607048988,
+        "tSNE_Y": -8.8144187927
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "I thought I felt a <b>drop</b> of rain.",
+        "Word": "drop",
+        "tSNE_X": -7.4857192039,
+        "tSNE_Y": -3.6761369705
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "Temperatures can <b>drop</b> to freezing at night.",
+        "Word": "drop",
+        "tSNE_X": 7.3524260521,
+        "tSNE_Y": 6.5842046738
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "As we headed back to London, the <b>coach</b> was badly delayed by roadworks.",
+        "Word": "coach",
+        "tSNE_X": 4.8597278595,
+        "tSNE_Y": -2.6967864037
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "We're going to the airport by <b>coach</b>.",
+        "Word": "coach",
+        "tSNE_X": -1.6316877604,
+        "tSNE_Y": -5.4557433128
+      },
+      {
+        "Target": "hand",
+        "_Sentence": "He wiped his sweaty <b>hand</b>.",
+        "Word": "hand",
+        "tSNE_X": -2.2073459625,
+        "tSNE_Y": -8.0691623688
+      },
+      {
+        "Target": "hand",
+        "_Sentence": "I put my <b>hand</b> into my pocket and pulled out the letter.",
+        "Word": "hand",
+        "tSNE_X": 9.0427522659,
+        "tSNE_Y": -0.5245012045
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "She had long red <b>fingernails</b>.",
+        "Word": "fingernails",
+        "tSNE_X": 0.2463820279,
+        "tSNE_Y": -6.7498416901
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "That man was appointed as the new <b>coach</b>.",
+        "Word": "coach",
+        "tSNE_X": -3.0604810715,
+        "tSNE_Y": -1.0941332579
+      },
+      {
+        "Target": "coach",
+        "_Sentence": "She has recently joined the amateur team as <b>coach</b>.",
+        "Word": "coach",
+        "tSNE_X": -3.3606479168,
+        "tSNE_Y": -0.9743820429
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "Please stop biting your <b>nails</b>!",
+        "Word": "nails",
+        "tSNE_X": -0.0364630818,
+        "tSNE_Y": -6.2295145988
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "I <b>duck</b> the head to hide my admiration.",
+        "Word": "duck",
+        "tSNE_X": 5.0515828133,
+        "tSNE_Y": 8.9272546768
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "Chickens and <b>ducks</b> scratch around the outbuildings.",
+        "Word": "ducks",
+        "tSNE_X": -5.8169541359,
+        "tSNE_Y": 4.8151130676
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "His blood pressure had <b>dropped</b> severely.",
+        "Word": "dropped",
+        "tSNE_X": 7.7296218872,
+        "tSNE_Y": 6.5616841316
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "The cat wants to <b>spring</b> onto the sofa.",
+        "Word": "spring",
+        "tSNE_X": 2.0521416664,
+        "tSNE_Y": 7.6915054321
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "Throwing back the sheet, he <b>springs</b> from the bed.",
+        "Word": "springs",
+        "tSNE_X": 2.4231164455,
+        "tSNE_Y": 9.0263700485
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "He bought her an emerald <b>ring</b>.",
+        "Word": "ring",
+        "tSNE_X": 2.9184081554,
+        "tSNE_Y": -4.5038046837
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "I would <b>ring</b> when I got back to the hotel.",
+        "Word": "ring",
+        "tSNE_X": 9.8891544342,
+        "tSNE_Y": -4.6449561119
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "Pass me those two <b>leads</b> please.",
+        "Word": "leads",
+        "tSNE_X": -0.6497219801,
+        "tSNE_Y": 1.7612884045
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "His goal gave them a two-goal <b>lead</b> once more time.",
+        "Word": "lead",
+        "tSNE_X": -7.214635849,
+        "tSNE_Y": 1.0335427523
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "Keep your <b>fingernails</b> short and your hands clean.",
+        "Word": "fingernails",
+        "tSNE_X": 2.328397274,
+        "tSNE_Y": -8.767367363
+      },
+      {
+        "Target": "nail",
+        "_Sentence": "He hammered the <b>nail</b> into the branch.",
+        "Word": "nail",
+        "tSNE_X": 1.9271540642,
+        "tSNE_Y": 2.5071082115
+      },
+      {
+        "Target": "match",
+        "_Sentence": "It would be difficult to <b>match</b> the service this airline gives its customers.",
+        "Word": "match",
+        "tSNE_X": 4.6304531097,
+        "tSNE_Y": 4.3073987961
+      },
+      {
+        "Target": "match",
+        "_Sentence": "You should always strike a <b>match</b> away from you.",
+        "Word": "match",
+        "tSNE_X": 1.1673618555,
+        "tSNE_Y": 1.8123180866
+      },
+      {
+        "Target": "match",
+        "_Sentence": "He was watching a football <b>match</b>.",
+        "Word": "match",
+        "tSNE_X": -3.7919983864,
+        "tSNE_Y": -3.2498040199
+      },
+      {
+        "Target": "bus",
+        "_Sentence": "We're going to the airport by <b>bus</b>.",
+        "Word": "bus",
+        "tSNE_X": -1.643271327,
+        "tSNE_Y": -5.2268199921
+      },
+      {
+        "Target": "bus",
+        "_Sentence": "They had to travel everywhere by <b>bus</b>.",
+        "Word": "bus",
+        "tSNE_X": -1.5507295132,
+        "tSNE_Y": -4.695089817
+      },
+      {
+        "Target": "bat",
+        "_Sentence": "She showed me how to hold the <b>bat</b>.",
+        "Word": "bat",
+        "tSNE_X": -1.4424898624,
+        "tSNE_Y": -2.6960253716
+      },
+      {
+        "Target": "bat",
+        "_Sentence": "Due to their physiology, <b>bats</b> are one type of animal that acts as a natural reservoir of many pathogens.",
+        "Word": "bats",
+        "tSNE_X": -3.2789957523,
+        "tSNE_Y": 4.9664921761
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "He <b>ducked</b> in time to save his head from a blow from the poker.",
+        "Word": "ducked",
+        "tSNE_X": 4.2766904831,
+        "tSNE_Y": 7.2955207825
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "I used to work in the local branch of a large <b>bank</b>.",
+        "Word": "bank",
+        "tSNE_X": -2.5836517811,
+        "tSNE_Y": -4.3955535889
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "Which <b>bank</b> offers you the service that best suits your financial needs?",
+        "Word": "bank",
+        "tSNE_X": 7.4353351593,
+        "tSNE_Y": 2.2851426601
+      },
+      {
+        "Target": "match",
+        "_Sentence": "Do you really think our team has a chance of <b>matching</b> their score?",
+        "Word": "matching",
+        "tSNE_X": 4.7550969124,
+        "tSNE_Y": 5.1439623833
+      },
+      {
+        "Target": "match",
+        "_Sentence": "They bough two boxes of <b>matches</b>.",
+        "Word": "matches",
+        "tSNE_X": -1.2254652977,
+        "tSNE_Y": -0.8085619211
+      },
+      {
+        "Target": "match",
+        "_Sentence": "Chelsea have a <b>match</b> with United next week.",
+        "Word": "match",
+        "tSNE_X": -4.3586506844,
+        "tSNE_Y": 1.4415973425
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "A <b>spring</b> popped out of the watch.",
+        "Word": "spring",
+        "tSNE_X": 2.4122591019,
+        "tSNE_Y": 5.8214335442
+      },
+      {
+        "Target": "band",
+        "_Sentence": "They were probably the most famous <b>band</b> in the world.",
+        "Word": "band",
+        "tSNE_X": 5.8732681274,
+        "tSNE_Y": -0.6137754917
+      },
+      {
+        "Target": "band",
+        "_Sentence": "A <b>band</b> of light glowed in the space between floor and door.",
+        "Word": "band",
+        "tSNE_X": 4.4701323509,
+        "tSNE_Y": 2.0872075558
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "When we reached the opposite <b>bank</b>, the boat was sinking fast.",
+        "Word": "bank",
+        "tSNE_X": 8.139081955,
+        "tSNE_Y": 3.3605556488
+      },
+      {
+        "Target": "bank",
+        "_Sentence": "The children pelted down the <b>bank</b>, over the bridge and along the path.",
+        "Word": "bank",
+        "tSNE_X": 8.3553981781,
+        "tSNE_Y": 3.4963407516
+      },
+      {
+        "Target": "drop",
+        "_Sentence": "Add the cream a few <b>drops</b> at a time..",
+        "Word": "drops",
+        "tSNE_X": -1.283441186,
+        "tSNE_Y": 8.9461612701
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "I listen to country and <b>rock</b>.",
+        "Word": "rock",
+        "tSNE_X": -3.3587908745,
+        "tSNE_Y": -5.4441566467
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "She once told an interviewer that they didn't even like <b>rock</b> music.",
+        "Word": "rock",
+        "tSNE_X": 6.5292105675,
+        "tSNE_Y": -1.809607625
+      },
+      {
+        "Target": "equal",
+        "_Sentence": "We raised a lot of money last year and we're hoping to <b>equal</b> that this year.",
+        "Word": "equal",
+        "tSNE_X": 5.5642786026,
+        "tSNE_Y": 4.8087964058
+      },
+      {
+        "Target": "equal",
+        "_Sentence": "It would be difficult to <b>equal</b> the service this airline gives its customers.",
+        "Word": "equal",
+        "tSNE_X": 5.1939134598,
+        "tSNE_Y": 4.4891753197
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "Huge waves crashed against the <b>rocks</b>.",
+        "Word": "rocks",
+        "tSNE_X": 0.7400451899,
+        "tSNE_Y": -4.5173101425
+      },
+      {
+        "Target": "beads",
+        "_Sentence": "He wiped away the <b>beads</b> of sweat on his forehead.",
+        "Word": "beads",
+        "tSNE_X": -1.3751102686,
+        "tSNE_Y": 10.337346077
+      },
+      {
+        "Target": "beads",
+        "_Sentence": "Add the cream a few <b>beads</b> at a time..",
+        "Word": "beads",
+        "tSNE_X": -1.260178566,
+        "tSNE_Y": 9.2360639572
+      },
+      {
+        "Target": "stick",
+        "_Sentence": "She showed me how to hold the <b>stick</b>.",
+        "Word": "stick",
+        "tSNE_X": -0.9563478231,
+        "tSNE_Y": -2.3356034756
+      },
+      {
+        "Target": "stick",
+        "_Sentence": "Unlike a baseball <b>stick</b> a cricket one has an edge which is significantly sharper.",
+        "Word": "stick",
+        "tSNE_X": 1.9574967623,
+        "tSNE_Y": 1.0179764032
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "I <b>ring</b> home once a week to tell my parents I'm okay.",
+        "Word": "ring",
+        "tSNE_X": 9.5151453018,
+        "tSNE_Y": -5.1760716438
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "Both <b>springs</b> in the fuel pump were broken.",
+        "Word": "springs",
+        "tSNE_X": 2.3984375,
+        "tSNE_Y": 5.8632335663
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "They now have a <b>lead</b> of 28 points.",
+        "Word": "lead",
+        "tSNE_X": -7.2720136642,
+        "tSNE_Y": 0.7877990007
+      },
+      {
+        "Target": "phoned",
+        "_Sentence": "She <b>phoned</b> just after lunch.",
+        "Word": "phoned",
+        "tSNE_X": 10.1762771606,
+        "tSNE_Y": -3.708165884
+      },
+      {
+        "Target": "phoned",
+        "_Sentence": "I would <b>phone</b> when I got back to the hotel.",
+        "Word": "phone",
+        "tSNE_X": 10.0803108215,
+        "tSNE_Y": -4.3716902733
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "The island has long golden beaches fringed by <b>palm</b> trees.",
+        "Word": "palm",
+        "tSNE_X": 5.5669064522,
+        "tSNE_Y": -6.6149015427
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "He wiped his sweaty <b>palm</b>.",
+        "Word": "palm",
+        "tSNE_X": -2.2485764027,
+        "tSNE_Y": -8.0129804611
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "They met again in the <b>spring</b> of 1977.",
+        "Word": "spring",
+        "tSNE_X": 2.2592351437,
+        "tSNE_Y": -2.6102409363
+      },
+      {
+        "Target": "Chiropterans",
+        "_Sentence": "<b>Chiropterans</b> are more manoeuvrable than birds.",
+        "Word": "Chiropterans",
+        "tSNE_X": -3.0708856583,
+        "tSNE_Y": 6.1672577858
+      },
+      {
+        "Target": "Chiropterans",
+        "_Sentence": "Any mammal, of the order <b>Chiroptera</b>, that has forelimbs modified to form wings.",
+        "Word": "Chiroptera",
+        "tSNE_X": -3.1793346405,
+        "tSNE_Y": 6.4471092224
+      },
+      {
+        "Target": "strip",
+        "_Sentence": "A <b>strip</b> of light glowed in the space between floor and door.",
+        "Word": "strip",
+        "tSNE_X": 4.5267696381,
+        "tSNE_Y": 2.1524808407
+      },
+      {
+        "Target": "strip",
+        "_Sentence": "Serve dish with <b>strips</b> of fresh raw vegetables.",
+        "Word": "strips",
+        "tSNE_X": 0.5897851586,
+        "tSNE_Y": 0.3640669286
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "I'm looking at a <b>ring</b> with a jewel attached to it.",
+        "Word": "ring",
+        "tSNE_X": 3.4781968594,
+        "tSNE_Y": -4.4362015724
+      },
+      {
+        "Target": "ruler",
+        "_Sentence": "The country was without a <b>ruler</b> after the queen died.",
+        "Word": "ruler",
+        "tSNE_X": 0.0566654168,
+        "tSNE_Y": 5.4844312668
+      },
+      {
+        "Target": "ruler",
+        "_Sentence": "The current <b>ruler</b> is concentrating all power in his own hands. ",
+        "Word": "ruler",
+        "tSNE_X": 0.0812855884,
+        "tSNE_Y": 6.0331397057
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "We planted bulbs to flower in <b>spring</b>.",
+        "Word": "spring",
+        "tSNE_X": 0.4554605186,
+        "tSNE_Y": -3.2530286312
+      },
+      {
+        "Target": "potentates",
+        "_Sentence": "Colonial rulers groomed and paid local <b>potentates</b>.",
+        "Word": "potentates",
+        "tSNE_X": -0.8820982575,
+        "tSNE_Y": 4.5715384483
+      },
+      {
+        "Target": "potentates",
+        "_Sentence": "The country was without a <b>potentate</b> after the queen died.",
+        "Word": "potentate",
+        "tSNE_X": -0.5931758285,
+        "tSNE_Y": 4.5813903809
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "Cherry trees bloom in the <b>springtime</b>.",
+        "Word": "springtime",
+        "tSNE_X": 1.1325390339,
+        "tSNE_Y": -2.8767206669
+      },
+      {
+        "Target": "ring",
+        "_Sentence": "We planted bulbs to flower in <b>springtime</b>.",
+        "Word": "springtime",
+        "tSNE_X": 1.0192767382,
+        "tSNE_Y": -2.710832119
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "This tiny device fits into the <b>palm</b> of your hand.",
+        "Word": "palm",
+        "tSNE_X": 9.5215129852,
+        "tSNE_Y": 0.5008144379
+      },
+      {
+        "Target": "ruler",
+        "_Sentence": "Most <b>rulers</b> work by having numbers and little lines.",
+        "Word": "rulers",
+        "tSNE_X": -0.5157440901,
+        "tSNE_Y": 6.1993479729
+      },
+      {
+        "Target": "bat",
+        "_Sentence": "I accidentally bashed him with my <b>bat</b>.",
+        "Word": "bat",
+        "tSNE_X": -1.732749939,
+        "tSNE_Y": -2.9808130264
+      },
+      {
+        "Target": "game",
+        "_Sentence": "A <b>game</b> consists of two halves lasting 45 minutes, meaning it is 90 minutes long.",
+        "Word": "game",
+        "tSNE_X": -3.8341696262,
+        "tSNE_Y": 1.4031656981
+      },
+      {
+        "Target": "game",
+        "_Sentence": "He was watching a football <b>game</b>.",
+        "Word": "game",
+        "tSNE_X": -4.1541190147,
+        "tSNE_Y": -3.2966349125
+      },
+      {
+        "Target": "drakes",
+        "_Sentence": "The <b>drakes</b> started quacking loudly when we threw them some bread.",
+        "Word": "drakes",
+        "tSNE_X": -1.8837852478,
+        "tSNE_Y": 3.2542393208
+      },
+      {
+        "Target": "drakes",
+        "_Sentence": "A lone <b>drake</b> sat by the edge of the pond.",
+        "Word": "drake",
+        "tSNE_X": -2.306303978,
+        "tSNE_Y": 3.3288674355
+      },
+      {
+        "Target": "rock",
+        "_Sentence": "She picked up a <b>rock</b> and threw it into the trees.",
+        "Word": "rock",
+        "tSNE_X": 3.1659808159,
+        "tSNE_Y": -0.8253727555
+      },
+      {
+        "Target": "palm",
+        "_Sentence": "More than two-thirds of <b>palms</b> live in tropical forests.",
+        "Word": "palms",
+        "tSNE_X": 5.7366771698,
+        "tSNE_Y": -6.8184485435
+      },
+      {
+        "Target": "lower",
+        "_Sentence": "I <b>lower</b> the head to hide my admiration.",
+        "Word": "lower",
+        "tSNE_X": 5.2374367714,
+        "tSNE_Y": 9.0199108124
+      },
+      {
+        "Target": "lower",
+        "_Sentence": "She <b>lowered</b> her gaze to the hands in her lap.",
+        "Word": "lowered",
+        "tSNE_X": 6.6645746231,
+        "tSNE_Y": 8.4749717712
+      },
+      {
+        "Target": "band",
+        "_Sentence": "A narrow <b>band</b> of grass separated the greenhouse from the vegetable garden.",
+        "Word": "band",
+        "tSNE_X": 3.7942147255,
+        "tSNE_Y": 1.9959971905
+      },
+      {
+        "Target": "tack",
+        "_Sentence": "A mirror hung on a <b>tack</b> above the washstand.",
+        "Word": "tack",
+        "tSNE_X": 2.176094532,
+        "tSNE_Y": 3.8026275635
+      },
+      {
+        "Target": "tack",
+        "_Sentence": "He fixed it with three <b>tacks</b>.",
+        "Word": "tacks",
+        "tSNE_X": -0.0260690879,
+        "tSNE_Y": -0.3189506233
+      },
+      {
+        "Target": "lead",
+        "_Sentence": "She lifted the <b>lead</b> again.",
+        "Word": "lead",
+        "tSNE_X": -0.2522519827,
+        "tSNE_Y": 2.3876433372
+      },
+      {
+        "Target": "band",
+        "_Sentence": "This week the <b>band</b> did the last gig of their tour.",
+        "Word": "band",
+        "tSNE_X": 5.6820569038,
+        "tSNE_Y": -0.9230709076
+      },
+      {
+        "Target": "ensemble",
+        "_Sentence": "He has also formed an exciting <b>ensemble</b> with several other musicians.",
+        "Word": "ensemble",
+        "tSNE_X": 6.2485547066,
+        "tSNE_Y": 0.7097323537
+      },
+      {
+        "Target": "ensemble",
+        "_Sentence": "They were probably the most famous <b>ensemble</b> in the world.",
+        "Word": "ensemble",
+        "tSNE_X": 5.9620051384,
+        "tSNE_Y": 0.3344821334
+      },
+      {
+        "Target": "trainer",
+        "_Sentence": "That man was appointed as the new <b>trainer</b>.",
+        "Word": "trainer",
+        "tSNE_X": -2.2973532677,
+        "tSNE_Y": 0.0564388745
+      },
+      {
+        "Target": "trainer",
+        "_Sentence": "They need a new <b>trainer</b> for the young athletes.",
+        "Word": "trainer",
+        "tSNE_X": -1.7221786976,
+        "tSNE_Y": 1.044044137
+      },
+      {
+        "Target": "duck",
+        "_Sentence": "The <b>ducks</b> started quacking loudly when we threw them some bread.",
+        "Word": "ducks",
+        "tSNE_X": -5.5360383987,
+        "tSNE_Y": 4.703397274
+      },
+      {
+        "Target": "advantage",
+        "_Sentence": "They now have an <b>advantage</b> of 28 points.",
+        "Word": "advantage",
+        "tSNE_X": -7.5939040184,
+        "tSNE_Y": 0.1188848913
+      },
+      {
+        "Target": "advantage",
+        "_Sentence": "The player who scores the next point after deuce has the <b>advantage</b>.",
+        "Word": "advantage",
+        "tSNE_X": -6.7478222847,
+        "tSNE_Y": -0.8713603616
+      },
+      {
+        "Target": "stone",
+        "_Sentence": "Use that <b>stone</b> there to hold the door open.",
+        "Word": "stone",
+        "tSNE_X": 3.2030761242,
+        "tSNE_Y": 0.0218769778
+      },
+      {
+        "Target": "stone",
+        "_Sentence": "She picked up a <b>stone</b> and threw it into the trees.",
+        "Word": "stone",
+        "tSNE_X": 3.1478946209,
+        "tSNE_Y": -0.4910867214
+      }
+    ]
+  },
+  "scatter_data": {
+    "title": "Scatter plot of cosine similarities",
+    "description": "Scatter plot of cosine similarities where X-axis is dataframe indices and Y-axis is similarity",
+    "conclusion": "Cosine similarity is not a reliable metric for determining homonyms and synonyms from BERT token embeddings",
+    "points": [
+      {
+        "X": 0,
+        "Y": 0.6535550356,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2510026097,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.5621988773,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 4,
+        "Y": 0.3832049966,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.5001776218,
+        "Size": 14,
+        "Color": "blue"
+      },
+      {
+        "X": 6,
+        "Y": 0.3188077211,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.2588127553,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.3171534538,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 9,
+        "Y": 0.5137816668,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.3238358796,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 11,
+        "Y": 0.7354716063,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 12,
+        "Y": 0.2926363349,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 13,
+        "Y": 0.4500989914,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 14,
+        "Y": 0.2771444917,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 15,
+        "Y": 0.8200184107,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 16,
+        "Y": 0.5011829734,
+        "Size": 20,
+        "Color": "red"
+      },
+      {
+        "X": 17,
+        "Y": 0.8392132521,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 18,
+        "Y": 0.572266221,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 19,
+        "Y": 0.6675375104,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 20,
+        "Y": 0.2384288013,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 21,
+        "Y": 0.3863584995,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 22,
+        "Y": 0.2497029901,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 23,
+        "Y": 0.4072098732,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 24,
+        "Y": 0.4992546141,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 25,
+        "Y": 0.3425227702,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 26,
+        "Y": 0.2950391769,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 27,
+        "Y": 0.703815341,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 28,
+        "Y": 0.3186649978,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 30,
+        "Y": 0.2128685862,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 31,
+        "Y": 0.3229650855,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 32,
+        "Y": 0.2816752493,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 33,
+        "Y": 0.3259889781,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 34,
+        "Y": 0.292429775,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 35,
+        "Y": 0.2570203543,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 36,
+        "Y": 0.2728515267,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 37,
+        "Y": 0.5147271752,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 38,
+        "Y": 0.418471694,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 39,
+        "Y": 0.6582649946,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 40,
+        "Y": 0.4701393843,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 41,
+        "Y": 0.2668568194,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 42,
+        "Y": 0.1869476438,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 43,
+        "Y": 0.6428676844,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 44,
+        "Y": 0.2684686184,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 45,
+        "Y": 0.4802445769,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 46,
+        "Y": 0.6025131941,
+        "Size": 22,
+        "Color": "blue"
+      },
+      {
+        "X": 47,
+        "Y": 0.6383722425,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 48,
+        "Y": 0.358967036,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 49,
+        "Y": 0.6888255477,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 50,
+        "Y": 0.4999328256,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 51,
+        "Y": 0.3954209387,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 52,
+        "Y": 0.4633712173,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 53,
+        "Y": 0.3615030646,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 54,
+        "Y": 0.548758924,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 55,
+        "Y": 0.3343417645,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 56,
+        "Y": 0.383392632,
+        "Size": 14,
+        "Color": "blue"
+      },
+      {
+        "X": 57,
+        "Y": 0.4096601903,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 58,
+        "Y": 0.4038165808,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 59,
+        "Y": 0.9128531218,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 60,
+        "Y": 0.498085767,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 61,
+        "Y": 0.2987711132,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 62,
+        "Y": 0.4708127379,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 63,
+        "Y": 0.3367629051,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 64,
+        "Y": 0.3122611642,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 65,
+        "Y": 0.499628067,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 66,
+        "Y": 0.7842248678,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 67,
+        "Y": 0.8621944785,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 68,
+        "Y": 0.4005167484,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 69,
+        "Y": 0.3659209609,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 70,
+        "Y": 0.2440041304,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 71,
+        "Y": 0.4860473871,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 72,
+        "Y": 0.2957564592,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 73,
+        "Y": 0.7351949215,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 74,
+        "Y": 0.2722144425,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 75,
+        "Y": 0.326048553,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 76,
+        "Y": 0.4580075443,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 77,
+        "Y": 0.7975795269,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 78,
+        "Y": 0.3614147305,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 79,
+        "Y": 0.288734138,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 80,
+        "Y": 0.3842511475,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 81,
+        "Y": 0.367961973,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 82,
+        "Y": 0.1970773339,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 83,
+        "Y": 0.6109948754,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 84,
+        "Y": 0.3402068317,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 85,
+        "Y": 0.5438081026,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 86,
+        "Y": 0.7032498121,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 87,
+        "Y": 0.2914211154,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 88,
+        "Y": 0.3361605108,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 89,
+        "Y": 0.6826639175,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 90,
+        "Y": 0.1579410732,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 91,
+        "Y": 0.4313948154,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 92,
+        "Y": 0.5144088268,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 93,
+        "Y": 0.5905328393,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 94,
+        "Y": 0.4019278288,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 95,
+        "Y": 0.3728079796,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 97,
+        "Y": 0.3908884525,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 98,
+        "Y": 0.4345426559,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 99,
+        "Y": 0.2870523334,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 100,
+        "Y": 0.4800866842,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 101,
+        "Y": 0.6599054337,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 102,
+        "Y": 0.1941347122,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 103,
+        "Y": 0.2685754895,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 104,
+        "Y": 0.7802454233,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 105,
+        "Y": 0.3530724347,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 106,
+        "Y": 0.3573350608,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 108,
+        "Y": 0.3076095283,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 109,
+        "Y": 0.1844896525,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 110,
+        "Y": 0.3282236159,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 111,
+        "Y": 0.4972987175,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 112,
+        "Y": 0.4739208817,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 113,
+        "Y": 0.3629519343,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 114,
+        "Y": 0.5411115885,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 115,
+        "Y": 0.2972847223,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 116,
+        "Y": 0.436884582,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 117,
+        "Y": 0.7180370092,
+        "Size": 19,
+        "Color": "blue"
+      },
+      {
+        "X": 118,
+        "Y": 0.3097933531,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 119,
+        "Y": 0.8204003572,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 120,
+        "Y": 0.4019732475,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 121,
+        "Y": 0.4643267989,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 122,
+        "Y": 0.8596848845,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 123,
+        "Y": 0.1741864234,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 124,
+        "Y": 0.4612949491,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 125,
+        "Y": 0.7254552841,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 126,
+        "Y": 0.37491557,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 127,
+        "Y": 0.8291935921,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 128,
+        "Y": 0.4172085226,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 129,
+        "Y": 0.4688968658,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 130,
+        "Y": 0.4508014321,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 131,
+        "Y": 0.4786077738,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 132,
+        "Y": 0.8170337677,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 133,
+        "Y": 0.3051328361,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 134,
+        "Y": 0.3439401984,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 135,
+        "Y": 0.2374852002,
+        "Size": 15,
+        "Color": "blue"
+      },
+      {
+        "X": 136,
+        "Y": 0.3004413843,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 137,
+        "Y": 0.5695293546,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 138,
+        "Y": 0.4867214561,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 139,
+        "Y": 0.260702759,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 140,
+        "Y": 0.1426365972,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 141,
+        "Y": 0.6879709959,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 142,
+        "Y": 0.4111898839,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 143,
+        "Y": 0.6262772083,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 144,
+        "Y": 0.3999775946,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 145,
+        "Y": 0.3258972764,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 146,
+        "Y": 0.2989222407,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 147,
+        "Y": 0.8083464503,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 148,
+        "Y": 0.7024009228,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 150,
+        "Y": 0.5846989155,
+        "Size": 18,
+        "Color": "blue"
+      },
+      {
+        "X": 151,
+        "Y": 0.2260980308,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 152,
+        "Y": 0.6504147053,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 153,
+        "Y": 0.6883330941,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 154,
+        "Y": 0.2825452685,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 155,
+        "Y": 0.2427371591,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 156,
+        "Y": 0.4505176544,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 157,
+        "Y": 0.7407314777,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 158,
+        "Y": 0.3421004415,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 159,
+        "Y": 0.7137252688,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 160,
+        "Y": 0.5243985653,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 161,
+        "Y": 0.3961360157,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 162,
+        "Y": 0.4146542251,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 163,
+        "Y": 0.3320128918,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 164,
+        "Y": 0.4165253639,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 165,
+        "Y": 0.7609260082,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 167,
+        "Y": 0.6241304874,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 168,
+        "Y": 0.6827262044,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 169,
+        "Y": 0.303290993,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 170,
+        "Y": 0.5054632425,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 171,
+        "Y": 0.8870170116,
+        "Size": 20,
+        "Color": "blue"
+      },
+      {
+        "X": 172,
+        "Y": 0.6560969353,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 174,
+        "Y": 0.3568076193,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 175,
+        "Y": 0.8045700788,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 176,
+        "Y": 0.4666360319,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 177,
+        "Y": 0.5867847204,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 178,
+        "Y": 0.8573095798,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 179,
+        "Y": 0.4967952967,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 180,
+        "Y": 0.2709134519,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 181,
+        "Y": 0.6044672728,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 182,
+        "Y": 0.5392780304,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 183,
+        "Y": 0.3373505175,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 184,
+        "Y": 0.3868306875,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 186,
+        "Y": 0.6499768496,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 187,
+        "Y": 0.6886420846,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 188,
+        "Y": 0.3753888607,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 189,
+        "Y": 0.5138998032,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 190,
+        "Y": 0.7494884729,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 191,
+        "Y": 0.3792165518,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 192,
+        "Y": 0.2219975293,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 193,
+        "Y": 0.4962256551,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 194,
+        "Y": 0.2790578306,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 195,
+        "Y": 0.3498652577,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 196,
+        "Y": 0.4019988179,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 197,
+        "Y": 0.5589911938,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 198,
+        "Y": 0.2834001482,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 199,
+        "Y": 0.1191355512,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 200,
+        "Y": 0.676966548,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 201,
+        "Y": 0.1837794036,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 202,
+        "Y": 0.2847317755,
+        "Size": 18,
+        "Color": "red"
+      },
+      {
+        "X": 203,
+        "Y": 0.2823197842,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 204,
+        "Y": 0.3492913544,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 205,
+        "Y": 0.9999998212,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 206,
+        "Y": 0.2851414382,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 207,
+        "Y": 0.3511017561,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 208,
+        "Y": 0.4165614545,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 209,
+        "Y": 0.2921957374,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 210,
+        "Y": 0.2945005596,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 211,
+        "Y": 0.7020150423,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 212,
+        "Y": 0.2178352475,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 213,
+        "Y": 0.7458961606,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 214,
+        "Y": 0.3042113781,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 215,
+        "Y": 0.4207268953,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 216,
+        "Y": 0.9305483103,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 217,
+        "Y": 0.3052928448,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 218,
+        "Y": 0.5565769672,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 219,
+        "Y": 0.6436853409,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 220,
+        "Y": 0.3575245738,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 221,
+        "Y": 0.4487401247,
+        "Size": 15,
+        "Color": "blue"
+      },
+      {
+        "X": 222,
+        "Y": 0.6872878671,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 223,
+        "Y": 0.308008939,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 224,
+        "Y": 0.3822715878,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 225,
+        "Y": 0.5631110072,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 226,
+        "Y": 0.8883041143,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 227,
+        "Y": 0.6772776246,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 228,
+        "Y": 0.3056209683,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 229,
+        "Y": 0.4895401597,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 230,
+        "Y": 0.3746685386,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 231,
+        "Y": 0.2759477794,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 232,
+        "Y": 0.3851056993,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 233,
+        "Y": 0.2920812964,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 234,
+        "Y": 0.3145253062,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 236,
+        "Y": 0.8792691231,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 237,
+        "Y": 0.4969164729,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 238,
+        "Y": 0.6222156286,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 239,
+        "Y": 0.7947866917,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 240,
+        "Y": 0.4510166943,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 241,
+        "Y": 0.3538207114,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 242,
+        "Y": 0.3721865118,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 243,
+        "Y": 0.4764043391,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 244,
+        "Y": 0.3164896667,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 245,
+        "Y": 0.3154546618,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 246,
+        "Y": 0.4441681504,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 247,
+        "Y": 0.1877405047,
+        "Size": 20,
+        "Color": "red"
+      },
+      {
+        "X": 248,
+        "Y": 0.3656871319,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 249,
+        "Y": 0.3470560908,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 250,
+        "Y": 0.4902477562,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 251,
+        "Y": 0.4875735641,
+        "Size": 15,
+        "Color": "blue"
+      },
+      {
+        "X": 252,
+        "Y": 0.3598494828,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 253,
+        "Y": 0.7327249646,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 254,
+        "Y": 0.3688530624,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 255,
+        "Y": 0.2751622796,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 256,
+        "Y": 0.1444907188,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 257,
+        "Y": 0.3817808032,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 258,
+        "Y": 0.356991291,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 259,
+        "Y": 0.2319056392,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 260,
+        "Y": 0.9187707901,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 261,
+        "Y": 0.3522452116,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 262,
+        "Y": 0.6373050213,
+        "Size": 23,
+        "Color": "red"
+      },
+      {
+        "X": 263,
+        "Y": 0.2490351796,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 264,
+        "Y": 0.470972389,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 265,
+        "Y": 0.6141871214,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 266,
+        "Y": 0.5030510426,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 267,
+        "Y": 0.4775770605,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 268,
+        "Y": 0.3973118663,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 269,
+        "Y": 0.4947323799,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 270,
+        "Y": 0.4571788907,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 271,
+        "Y": 0.734326601,
+        "Size": 6,
+        "Color": "red"
+      },
+      {
+        "X": 272,
+        "Y": 0.6504017115,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 273,
+        "Y": 0.8722779751,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 274,
+        "Y": 0.5436313152,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 275,
+        "Y": 0.3318908513,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 276,
+        "Y": 0.3140102625,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 277,
+        "Y": 0.3046418428,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 278,
+        "Y": 0.3264454007,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 279,
+        "Y": 0.1560642421,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 280,
+        "Y": 0.4512715936,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 281,
+        "Y": 0.3176004589,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 282,
+        "Y": 0.2825323343,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 283,
+        "Y": 0.4866663218,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 284,
+        "Y": 0.3876235485,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 285,
+        "Y": 0.2771055698,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 286,
+        "Y": 0.3975538611,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 287,
+        "Y": 0.682811439,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 288,
+        "Y": 0.3578404188,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 289,
+        "Y": 0.7605013847,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 290,
+        "Y": 0.5132134557,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 291,
+        "Y": 0.5200660229,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 292,
+        "Y": 0.3725462556,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 293,
+        "Y": 0.3036944866,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 294,
+        "Y": 0.8179026842,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 295,
+        "Y": 0.6600316763,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 296,
+        "Y": 0.1953012645,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 297,
+        "Y": 0.5404963493,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 298,
+        "Y": 0.4752425551,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 299,
+        "Y": 0.2658613324,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 300,
+        "Y": 0.3170362711,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 301,
+        "Y": 0.4420738816,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 302,
+        "Y": 0.4518573582,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 303,
+        "Y": 0.2485524267,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 304,
+        "Y": 0.2798368931,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 305,
+        "Y": 0.7299966812,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 306,
+        "Y": 0.3446196318,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 307,
+        "Y": 0.4918988347,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 308,
+        "Y": 0.1492456198,
+        "Size": 14,
+        "Color": "blue"
+      },
+      {
+        "X": 309,
+        "Y": 0.6148090959,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 310,
+        "Y": 0.5612853169,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 312,
+        "Y": 0.3286536038,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 313,
+        "Y": 0.2153118849,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 314,
+        "Y": 0.6628389955,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 315,
+        "Y": 0.4552481174,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 316,
+        "Y": 0.3908931613,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 317,
+        "Y": 0.5423048139,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 318,
+        "Y": 0.4718595743,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 319,
+        "Y": 0.4560618401,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 320,
+        "Y": 0.5433902144,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 321,
+        "Y": 0.3273809254,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 322,
+        "Y": 0.3568645418,
+        "Size": 12,
+        "Color": "blue"
+      },
+      {
+        "X": 323,
+        "Y": 0.3591353893,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 324,
+        "Y": 0.4155247211,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 325,
+        "Y": 0.2711237073,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 326,
+        "Y": 0.2654542029,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 327,
+        "Y": 0.3157441616,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 328,
+        "Y": 0.2744141519,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 329,
+        "Y": 0.440685153,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 330,
+        "Y": 0.2396091223,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 331,
+        "Y": 0.4663435519,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 332,
+        "Y": 0.417545259,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 333,
+        "Y": 0.8432495594,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 334,
+        "Y": 0.2918080986,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 335,
+        "Y": 0.3049215078,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 336,
+        "Y": 0.4770879745,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 337,
+        "Y": 0.674007833,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 338,
+        "Y": 0.255561173,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 339,
+        "Y": 0.3639369011,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 340,
+        "Y": 0.4836266041,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 341,
+        "Y": 0.6408009529,
+        "Size": 13,
+        "Color": "blue"
+      },
+      {
+        "X": 342,
+        "Y": 0.2791430354,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 344,
+        "Y": 0.229240194,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 345,
+        "Y": 0.3930857778,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 346,
+        "Y": 0.3955027163,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 347,
+        "Y": 0.326380074,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 348,
+        "Y": 0.7459770441,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 349,
+        "Y": 0.4365928769,
+        "Size": 15,
+        "Color": "blue"
+      },
+      {
+        "X": 350,
+        "Y": 0.369995147,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 351,
+        "Y": 0.4239469767,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 352,
+        "Y": 0.592279315,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 353,
+        "Y": 0.732417345,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 354,
+        "Y": 0.5107847452,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 355,
+        "Y": 0.6007444859,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 356,
+        "Y": 0.3671013117,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 357,
+        "Y": 0.3289543986,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 358,
+        "Y": 0.2707882822,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 359,
+        "Y": 0.4062359929,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 360,
+        "Y": 0.3520783186,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 361,
+        "Y": 0.4394644499,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 362,
+        "Y": 0.3524278998,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 363,
+        "Y": 0.3246013224,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 364,
+        "Y": 0.4141490459,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 365,
+        "Y": 0.3933352828,
+        "Size": 7,
+        "Color": "red"
+      },
+      {
+        "X": 366,
+        "Y": 0.2740444243,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 367,
+        "Y": 0.3307853937,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 368,
+        "Y": 0.2370598316,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 369,
+        "Y": 0.8648273349,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 370,
+        "Y": 0.8858994246,
+        "Size": 6,
+        "Color": "blue"
+      },
+      {
+        "X": 371,
+        "Y": 0.2539084256,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 372,
+        "Y": 0.3054844141,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 373,
+        "Y": 0.6259504557,
+        "Size": 6,
+        "Color": "red"
+      },
+      {
+        "X": 374,
+        "Y": 0.4300949574,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 375,
+        "Y": 0.4385451078,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 376,
+        "Y": 0.2964236438,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 377,
+        "Y": 0.6698174477,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 379,
+        "Y": 0.2483051866,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 380,
+        "Y": 0.2956627607,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 381,
+        "Y": 0.346678406,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 382,
+        "Y": 0.8314316273,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 383,
+        "Y": 0.2555735111,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 384,
+        "Y": 0.3404769301,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 385,
+        "Y": 0.2857369483,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 386,
+        "Y": 0.3979713023,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 387,
+        "Y": 0.8316651583,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 388,
+        "Y": 0.243211478,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 389,
+        "Y": 0.4885929823,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 390,
+        "Y": 0.365116775,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 391,
+        "Y": 0.4668086469,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 392,
+        "Y": 0.4261792898,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 393,
+        "Y": 0.5994228125,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 394,
+        "Y": 0.565186739,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 395,
+        "Y": 0.4021218419,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 396,
+        "Y": 0.376447618,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 397,
+        "Y": 0.4217795134,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 398,
+        "Y": 0.3961306214,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 399,
+        "Y": 0.4423016906,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 400,
+        "Y": 0.470035851,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 401,
+        "Y": 0.476467222,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 402,
+        "Y": 0.4214346409,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 403,
+        "Y": 0.7884312272,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 404,
+        "Y": 0.450237155,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 405,
+        "Y": 0.2078128755,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 406,
+        "Y": 0.6273043156,
+        "Size": 14,
+        "Color": "blue"
+      },
+      {
+        "X": 407,
+        "Y": 0.4919345677,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 408,
+        "Y": 0.5833403468,
+        "Size": 14,
+        "Color": "blue"
+      },
+      {
+        "X": 409,
+        "Y": 0.4001790881,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 410,
+        "Y": 0.3021543324,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 411,
+        "Y": 0.3360421658,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 412,
+        "Y": 0.5692530274,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 413,
+        "Y": 0.9058494568,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 414,
+        "Y": 0.3219893575,
+        "Size": 17,
+        "Color": "red"
+      },
+      {
+        "X": 416,
+        "Y": 0.5368753672,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 417,
+        "Y": 0.6008540392,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 418,
+        "Y": 0.5159758925,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 419,
+        "Y": 0.2400782555,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 420,
+        "Y": 0.6260131001,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 421,
+        "Y": 0.3606619835,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 422,
+        "Y": 0.0361087918,
+        "Size": 18,
+        "Color": "red"
+      },
+      {
+        "X": 423,
+        "Y": 0.5618852377,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 424,
+        "Y": 0.2742480934,
+        "Size": 20,
+        "Color": "red"
+      },
+      {
+        "X": 426,
+        "Y": 0.3390506506,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 427,
+        "Y": 0.5000950098,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 428,
+        "Y": 0.4061086178,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 429,
+        "Y": 0.3910652101,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 430,
+        "Y": 0.3848792911,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 431,
+        "Y": 0.3811088204,
+        "Size": 9,
+        "Color": "blue"
+      },
+      {
+        "X": 432,
+        "Y": 0.6348440647,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 433,
+        "Y": 0.6702508926,
+        "Size": 16,
+        "Color": "blue"
+      },
+      {
+        "X": 434,
+        "Y": 0.2212895602,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 435,
+        "Y": 0.9012329578,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 436,
+        "Y": 0.7452130914,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 437,
+        "Y": 0.3845588267,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 438,
+        "Y": 0.31504336,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 439,
+        "Y": 0.2846944928,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 440,
+        "Y": 0.7340323925,
+        "Size": 8,
+        "Color": "blue"
+      },
+      {
+        "X": 441,
+        "Y": 0.1976318806,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 442,
+        "Y": 0.2185345888,
+        "Size": 14,
+        "Color": "red"
+      },
+      {
+        "X": 443,
+        "Y": 0.4017723203,
+        "Size": 16,
+        "Color": "red"
+      },
+      {
+        "X": 444,
+        "Y": 0.6545574069,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 445,
+        "Y": 0.856413126,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 446,
+        "Y": 0.5639505386,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 447,
+        "Y": 0.583144784,
+        "Size": 11,
+        "Color": "blue"
+      },
+      {
+        "X": 448,
+        "Y": 0.407222569,
+        "Size": 9,
+        "Color": "red"
+      },
+      {
+        "X": 449,
+        "Y": 0.4462590516,
+        "Size": 10,
+        "Color": "red"
+      },
+      {
+        "X": 451,
+        "Y": 0.8326169252,
+        "Size": 6,
+        "Color": "blue"
+      },
+      {
+        "X": 452,
+        "Y": 0.3361136019,
+        "Size": 15,
+        "Color": "red"
+      },
+      {
+        "X": 453,
+        "Y": 0.5495283604,
+        "Size": 11,
+        "Color": "red"
+      },
+      {
+        "X": 454,
+        "Y": 0.4509825706,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 455,
+        "Y": 0.3422566354,
+        "Size": 12,
+        "Color": "red"
+      },
+      {
+        "X": 456,
+        "Y": 0.4288438559,
+        "Size": 8,
+        "Color": "red"
+      },
+      {
+        "X": 457,
+        "Y": 0.3480131626,
+        "Size": 13,
+        "Color": "red"
+      },
+      {
+        "X": 458,
+        "Y": 0.795755744,
+        "Size": 22,
+        "Color": "blue"
+      },
+      {
+        "X": 459,
+        "Y": 0.7395287752,
+        "Size": 10,
+        "Color": "blue"
+      },
+      {
+        "X": 460,
+        "Y": 0.3031406701,
+        "Size": 19,
+        "Color": "red"
+      },
+      {
+        "X": 461,
+        "Y": 0.7829176784,
+        "Size": 9,
+        "Color": "blue"
+      }
+    ]
+  },
+  "Realiability of cosine similarity with #common words": {
+    "title": "Scatter plot of error with respect to number of common words",
+    "description": "X-axis is the number of common words in two sentences and Y-axis is the error as measured by the difference from [0,1] values.",
+    "conclusion": "Cosine similarity fails to detect homonyms when two contexts are too similar",
+    "points": [
+      {
+        "X": 7,
+        "Y": 0.3464449644,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2510026097,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4378011227,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3832049966,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4998223782,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3188077211,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2588127553,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.6828465462,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.5137816668,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3238358796,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.2645283937,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.2926363349,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5499010086,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2771444917,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.8200184107,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.5011829734,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 11,
+        "Y": 0.1607867479,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.572266221,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 12,
+        "Y": 0.6675375104,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2384288013,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3863584995,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2497029901,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4072098732,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.4992546141,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3425227702,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2950391769,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 12,
+        "Y": 0.296184659,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3186649978,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2128685862,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3229650855,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2816752493,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3259889781,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.292429775,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2570203543,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.2728515267,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5147271752,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.418471694,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.6582649946,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5298606157,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2668568194,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.1869476438,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.6428676844,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2684686184,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.4802445769,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3974868059,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 6,
+        "Y": 0.6383722425,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.358967036,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.3111744523,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5000671744,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3954209387,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5366287827,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3615030646,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 12,
+        "Y": 0.548758924,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3343417645,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.616607368,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.5903398097,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.4038165808,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.9128531218,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.501914233,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2987711132,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4708127379,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.3367629051,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3122611642,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.500371933,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2157751322,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 4,
+        "Y": 0.1378055215,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5994832516,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.3659209609,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2440041304,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5139526129,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2957564592,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2648050785,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2722144425,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.326048553,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4580075443,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.7975795269,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3614147305,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.288734138,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.3842511475,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.367961973,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1970773339,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 9,
+        "Y": 0.6109948754,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3402068317,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5438081026,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.7032498121,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2914211154,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6638394892,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 9,
+        "Y": 0.6826639175,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1579410732,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4313948154,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4855911732,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 9,
+        "Y": 0.4094671607,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.4019278288,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.6271920204,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3908884525,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5654573441,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2870523334,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4800866842,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6599054337,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1941347122,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2685754895,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.7802454233,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3530724347,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3573350608,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3076095283,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1844896525,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3282236159,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.4972987175,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4739208817,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6370480657,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.4588884115,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2972847223,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.436884582,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2819629908,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3097933531,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.1795996428,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4019732475,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.5356732011,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 6,
+        "Y": 0.8596848845,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1741864234,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4612949491,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.2745447159,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.37491557,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.1708064079,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.5827914774,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 8,
+        "Y": 0.4688968658,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4508014321,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5213922262,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 11,
+        "Y": 0.8170337677,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.6948671639,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3439401984,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.7625147998,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3004413843,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4304706454,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5132785439,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.260702759,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1426365972,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3120290041,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4111898839,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.6262772083,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3999775946,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3258972764,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2989222407,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.8083464503,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.7024009228,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4153010845,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.2260980308,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3495852947,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.6883330941,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2825452685,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2427371591,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4505176544,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.7407314777,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3421004415,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 4,
+        "Y": 0.7137252688,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4756014347,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3961360157,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4146542251,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3320128918,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5834746361,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.7609260082,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3758695126,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3172737956,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.303290993,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4945367575,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.1129829884,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.6560969353,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3568076193,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.1954299212,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5333639681,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 4,
+        "Y": 0.5867847204,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.1426904202,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5032047033,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2709134519,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.6044672728,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4607219696,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3373505175,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3868306875,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.3500231504,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 4,
+        "Y": 0.3113579154,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 3,
+        "Y": 0.6246111393,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4861001968,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 3,
+        "Y": 0.2505115271,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3792165518,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2219975293,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.4962256551,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2790578306,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3498652577,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4019988179,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5589911938,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2834001482,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.1191355512,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.676966548,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.1837794036,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2847317755,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2823197842,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.6507086456,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 5,
+        "Y": 0.9999998212,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2851414382,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3511017561,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.4165614545,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2921957374,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2945005596,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.7020150423,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2178352475,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.7458961606,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3042113781,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5792731047,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 6,
+        "Y": 0.0694516897,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3052928448,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4434230328,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.3563146591,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3575245738,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.5512598753,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.3127121329,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.308008939,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.6177284122,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.4368889928,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.1116958857,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3227223754,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3056209683,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4895401597,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.6253314614,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2759477794,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3851056993,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2920812964,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3145253062,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.8792691231,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5030835271,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.6222156286,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.7947866917,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4510166943,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3538207114,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3721865118,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4764043391,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3164896667,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3154546618,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5558318496,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.1877405047,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3656871319,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3470560908,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5097522438,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.5124264359,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.3598494828,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.2672750354,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3688530624,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2751622796,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1444907188,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3817808032,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.643008709,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2319056392,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.0812292099,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 4,
+        "Y": 0.3522452116,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.6373050213,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2490351796,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.529027611,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3858128786,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.4969489574,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5224229395,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3973118663,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5052676201,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4571788907,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.734326601,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3495982885,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 6,
+        "Y": 0.1277220249,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5436313152,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3318908513,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3140102625,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3046418428,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3264454007,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1560642421,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4512715936,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.3176004589,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2825323343,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5133336782,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3876235485,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2771055698,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3975538611,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.317188561,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 6,
+        "Y": 0.3578404188,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.7605013847,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4867865443,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.5200660229,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3725462556,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3036944866,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.8179026842,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6600316763,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.1953012645,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4595036507,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5247574449,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2658613324,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3170362711,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5579261184,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.5481426418,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2485524267,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2798368931,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.2700033188,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3446196318,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5081011653,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.8507543802,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3851909041,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.5612853169,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3286536038,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2153118849,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 9,
+        "Y": 0.6628389955,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.5447518826,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3908931613,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4576951861,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.5281404257,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.5439381599,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4566097856,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3273809254,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.6431354582,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3591353893,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4155247211,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2711237073,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2654542029,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3157441616,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2744141519,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.440685153,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2396091223,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5336564481,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.582454741,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 5,
+        "Y": 0.8432495594,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2918080986,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3049215078,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4770879745,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.674007833,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.255561173,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3639369011,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4836266041,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3591990471,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2791430354,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.229240194,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3930857778,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3955027163,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.326380074,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.2540229559,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.5634071231,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.369995147,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4239469767,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 9,
+        "Y": 0.592279315,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 11,
+        "Y": 0.732417345,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.5107847452,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3992555141,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 3,
+        "Y": 0.6328986883,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3289543986,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2707882822,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5937640071,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.6479216814,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4394644499,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 3,
+        "Y": 0.3524278998,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3246013224,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4141490459,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3933352828,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2740444243,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3307853937,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2370598316,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.1351726651,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 3,
+        "Y": 0.1141005754,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.2539084256,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3054844141,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6259504557,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5699050426,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4385451078,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2964236438,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3301825523,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2483051866,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2956627607,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.346678406,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 8,
+        "Y": 0.1685683727,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2555735111,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3404769301,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2857369483,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3979713023,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 11,
+        "Y": 0.8316651583,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.243211478,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4885929823,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.365116775,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5331913531,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4261792898,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4005771875,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.434813261,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.4021218419,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.376447618,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4217795134,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.6038693786,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 7,
+        "Y": 0.4423016906,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.529964149,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.476467222,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4214346409,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.2115687728,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.450237155,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2078128755,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 9,
+        "Y": 0.3726956844,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.4919345677,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4166596532,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.4001790881,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3021543324,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3360421658,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.5692530274,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.0941505432,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3219893575,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.4631246328,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 9,
+        "Y": 0.6008540392,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5159758925,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2400782555,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3739868999,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 2,
+        "Y": 0.3606619835,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.0361087918,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5618852377,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 5,
+        "Y": 0.2742480934,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.3390506506,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5000950098,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.5938913822,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 3,
+        "Y": 0.3910652101,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3848792911,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6188911796,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3651559353,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3297491074,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.2212895602,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 6,
+        "Y": 0.9012329578,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 10,
+        "Y": 0.7452130914,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.3845588267,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.31504336,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.2846944928,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.2659676075,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.1976318806,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.2185345888,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.4017723203,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.6545574069,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.856413126,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 2,
+        "Y": 0.5639505386,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.416855216,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.407222569,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4462590516,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.1673830748,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 0,
+        "Y": 0.3361136019,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5495283604,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.5490174294,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3422566354,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.4288438559,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 1,
+        "Y": 0.3480131626,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 0,
+        "Y": 0.204244256,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 3,
+        "Y": 0.2604712248,
+        "Size": 5,
+        "Color": "blue"
+      },
+      {
+        "X": 1,
+        "Y": 0.3031406701,
+        "Size": 5,
+        "Color": "red"
+      },
+      {
+        "X": 7,
+        "Y": 0.2170823216,
+        "Size": 5,
+        "Color": "blue"
+      }
+    ]
+  },
+  "Outliers Table": {
+    "Synonyms": {
+      "Sent1": {
+        "8": "I lower the head to hide my admiration.",
+        "56": "Any mammal, of the order Chiroptera, that has forelimbs modified to form wings.",
+        "88": "The drakes started quacking loudly when we threw them some bread.",
+        "95": "Rulers can be made of plastic, metal, and other materials.",
+        "113": "I put my hand into my pocket and pulled out the letter.",
+        "133": "They had to travel everywhere by bus.",
+        "135": "Most measurers work by having numbers and little lines.",
+        "188": "As we headed back to London, the coach was badly delayed by roadworks.",
+        "204": "He ducked in time to save his head from a blow from the poker.",
+        "224": "Add the cream a few beads at a time..",
+        "230": "Serve dish with strips of fresh raw vegetables.",
+        "258": "He wiped his sweaty hand.",
+        "308": "Bats are more manoeuvrable than birds.",
+        "322": "When we reached the opposite border, the boat was sinking fast.",
+        "356": "As we headed back to London, the coach was badly delayed by roadworks.",
+        "360": "This tiny device fits into the palm of your hand.",
+        "398": "Chiropterans are more manoeuvrable than birds.",
+        "431": "A mirror hung on a nail above the washstand."
+      },
+      "Sent2": {
+        "8": "He ducked in time to save his head from a blow from the poker.",
+        "56": "Due to their physiology, bats are one type of animal that acts as a natural reservoir of many pathogens.",
+        "88": "Chickens and ducks scratch around the outbuildings.",
+        "95": "Most rulers work by having numbers and little lines.",
+        "113": "He wiped his sweaty palm.",
+        "133": "As we headed back to London, the coach was badly delayed by roadworks.",
+        "135": "Rulers can be made of plastic, metal, and other materials.",
+        "188": "We're going to the airport by coach.",
+        "204": "She lowered her gaze to the hands in her lap.",
+        "224": "I thought I felt a drop of rain.",
+        "230": "A band of light glowed in the space between floor and door.",
+        "258": "This tiny device fits into the palm of your hand.",
+        "308": "Any mammal, of the order Chiroptera, that has forelimbs modified to form wings.",
+        "322": "Many elephants live on the shores of Lake Kariba.",
+        "356": "We're going to the airport by bus.",
+        "360": "He wiped his sweaty palm.",
+        "398": "Bats are more manoeuvrable than birds.",
+        "431": "He fixed it with three tacks."
+      },
+      "Word1": {
+        "8": "lower",
+        "56": "Chiroptera",
+        "88": "drakes",
+        "95": "Rulers",
+        "113": "hand",
+        "133": "bus",
+        "135": "measurers",
+        "188": "coach",
+        "204": "ducked",
+        "224": "beads",
+        "230": "strips",
+        "258": "hand",
+        "308": "Bats",
+        "322": "border",
+        "356": "coach",
+        "360": "palm",
+        "398": "Chiropterans",
+        "431": "nail"
+      },
+      "Word2": {
+        "8": "ducked",
+        "56": "bats",
+        "88": "ducks",
+        "95": "rulers",
+        "113": "palm",
+        "133": "coach",
+        "135": "Rulers",
+        "188": "coach",
+        "204": "lowered",
+        "224": "drop",
+        "230": "band",
+        "258": "palm",
+        "308": "Chiroptera",
+        "322": "shores",
+        "356": "bus",
+        "360": "palm",
+        "398": "Bats",
+        "431": "tacks"
+      },
+      "CoSim": {
+        "8": 0.3171534538,
+        "56": 0.383392632,
+        "88": 0.3361605108,
+        "95": 0.3728079796,
+        "113": 0.3629519343,
+        "133": 0.3051328361,
+        "135": 0.2374852002,
+        "188": 0.3753888607,
+        "204": 0.3492913544,
+        "224": 0.3822715878,
+        "230": 0.3746685386,
+        "258": 0.356991291,
+        "308": 0.1492456198,
+        "322": 0.3568645418,
+        "356": 0.3671013117,
+        "360": 0.3520783186,
+        "398": 0.3961306214,
+        "431": 0.3811088204
+      }
+    },
+    "Homonyms": {
+      "Sent1": {
+        "15": "Temperatures can fall to freezing at night.",
+        "59": "We planted bulbs to flower in spring.",
+        "77": "I lower the head to hide my admiration.",
+        "86": "Cherry trees bloom in the springtime.",
+        "104": "Dolphins are more manoeuvrable than birds.",
+        "122": "Temperatures can increase to freezing at night.",
+        "132": "A circle of light glowed in the space between floor and door.",
+        "147": "We're going to the airport by bicycle.",
+        "148": "A mirror hung on a tack above the washstand.",
+        "157": "The pigeons started quacking loudly when we threw them some bread.",
+        "159": "He wiped his sweaty hand.",
+        "165": "Throwing back the sheet, he rises from the bed.",
+        "205": "She lifted the lead again.",
+        "211": "A mirror hung on a nail above the washstand.",
+        "213": "She picked up a stick and threw it into the trees.",
+        "236": "We're going to the airport by bicycle.",
+        "239": "We planted bulbs to flower in summer.",
+        "271": "She showed me how to hold the gun.",
+        "289": "He was watching a football stadium.",
+        "294": "He bought her an emerald necklace.",
+        "333": "He was watching a football stadium.",
+        "353": "A strip of light glowed in the space between floor and door.",
+        "387": "I used to work in the local branch of a large bank.",
+        "435": "We're going to the airport by bicycle.",
+        "436": "She picked up a rock and threw it into the trees.",
+        "445": "Throwing back the sheet, he springs from the bed."
+      },
+      "Sent2": {
+        "15": "Temperatures can increase to freezing at night.",
+        "59": "We planted bulbs to flower in summer.",
+        "77": "I raise the head to hide my admiration.",
+        "86": "We planted bulbs to flower in summer.",
+        "104": "Bats are more manoeuvrable than birds.",
+        "122": "Temperatures can drop to freezing at night.",
+        "132": "A band of light glowed in the space between floor and door.",
+        "147": "They had to travel everywhere by bus.",
+        "148": "A mirror hung on a wire above the washstand.",
+        "157": "The ducks started quacking loudly when we threw them some bread.",
+        "159": "He wiped his sweaty face.",
+        "165": "Throwing back the sheet, he jumps from the bed.",
+        "205": "She lifted the lead again.",
+        "211": "A mirror hung on a wire above the washstand.",
+        "213": "She picked up a stone and threw it into the trees.",
+        "236": "We're going to the airport by coach.",
+        "239": "We planted bulbs to flower in springtime.",
+        "271": "She showed me how to hold the bat.",
+        "289": "He was watching a football game.",
+        "294": "He bought her an emerald ring.",
+        "333": "He was watching a football match.",
+        "353": "A circle of light glowed in the space between floor and door.",
+        "387": "I used to work in the local branch of a large college.",
+        "435": "We're going to the airport by bus.",
+        "436": "She picked up a stick and threw it into the trees.",
+        "445": "Throwing back the sheet, he rises from the bed."
+      },
+      "Word1": {
+        "15": "fall",
+        "59": "spring",
+        "77": "lower",
+        "86": "springtime",
+        "104": "Dolphins",
+        "122": "increase",
+        "132": "circle",
+        "147": "bicycle",
+        "148": "tack",
+        "157": "pigeons",
+        "159": "hand",
+        "165": "rises",
+        "205": "lead",
+        "211": "nail",
+        "213": "stick",
+        "236": "bicycle",
+        "239": "summer",
+        "271": "gun",
+        "289": "stadium",
+        "294": "necklace",
+        "333": "stadium",
+        "353": "strip",
+        "387": "bank",
+        "435": "bicycle",
+        "436": "rock",
+        "445": "springs"
+      },
+      "Word2": {
+        "15": "increase",
+        "59": "summer",
+        "77": "raise",
+        "86": "summer",
+        "104": "Bats",
+        "122": "drop",
+        "132": "band",
+        "147": "bus",
+        "148": "wire",
+        "157": "ducks",
+        "159": "face",
+        "165": "jumps",
+        "205": "lead",
+        "211": "wire",
+        "213": "stone",
+        "236": "coach",
+        "239": "springtime",
+        "271": "bat",
+        "289": "game",
+        "294": "ring",
+        "333": "match",
+        "353": "circle",
+        "387": "college",
+        "435": "bus",
+        "436": "stick",
+        "445": "rises"
+      },
+      "CoSim": {
+        "15": 0.8200184107,
+        "59": 0.9128531218,
+        "77": 0.7975795269,
+        "86": 0.7032498121,
+        "104": 0.7802454233,
+        "122": 0.8596848845,
+        "132": 0.8170337677,
+        "147": 0.8083464503,
+        "148": 0.7024009228,
+        "157": 0.7407314777,
+        "159": 0.7137252688,
+        "165": 0.7609260082,
+        "205": 0.9999998212,
+        "211": 0.7020150423,
+        "213": 0.7458961606,
+        "236": 0.8792691231,
+        "239": 0.7947866917,
+        "271": 0.734326601,
+        "289": 0.7605013847,
+        "294": 0.8179026842,
+        "333": 0.8432495594,
+        "353": 0.732417345,
+        "387": 0.8316651583,
+        "435": 0.9012329578,
+        "436": 0.7452130914,
+        "445": 0.856413126
+      }
+    }
+  }
+}
