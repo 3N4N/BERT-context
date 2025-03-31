@@ -106,6 +106,10 @@ class BertLayerWiCEvaluator:
                     target_indices = [i]
                     break
 
+        print("Sentence", sentence)
+        print("Target Word", target_word)
+        print("Indexes", target_indices)
+
         # Extract embeddings from each layer for target token(s)
         all_layers_embeddings = []
 

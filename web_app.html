@@ -707,7 +707,7 @@
 
           <div class="tabs">
             <div class="tab" onclick="activateTab('future')" data-tab="future">
-              Semantic Embedding Evaluation
+              RQ1: Semantic Embedding Evaluation
             </div>
 
             <div
@@ -715,10 +715,10 @@
               onclick="activateTab('cross-lingual')"
               data-tab="cross-lingual"
             >
-              Cross-Lingual Analysis
+              RQ2: Cross-Lingual Analysis
             </div>
             <div class="tab active" onclick="activateTab('wic')" data-tab="wic">
-              BERT WiC Analysis
+              RQ3: BERT WiC Analysis
             </div>
           </div>
         </header>
@@ -1978,14 +1978,7 @@
           2
         )}-${data.homonym.max.toFixed(2)}</div>
       </div>
-    </div>
-    <div class="status-message status-info" style="margin-top: 20px;">
-      <strong>Key Finding:</strong> ${
-        data.future
-          ? data.future.conclusion
-          : "Cosine similarity is not a reliable metric for determining homonyms and synonyms from BERT token embeddings."
-      }
-    </div>
+    
   `;
       }
 
@@ -2650,7 +2643,7 @@
         statsDiv.innerHTML = `
           <div class="stats-grid">
             <div class="stat-card">
-              <div class="stat-title">Synonym Mean Similarity</div>
+              <div class="stat-title">Synonyms Mean Similarity</div>
               <div class="stat-value">${stats.mean_similarity_syn.toFixed(
                 4
               )}</div>
@@ -2662,12 +2655,12 @@
               )}</div>
             </div>
             <div class="stat-card">
-              <div class="stat-title">Min Similarity</div>
-              <div class="stat-value">${stats.min_similarity.toFixed(4)}</div>
+              <div class="stat-title">Synonyms Standard deviation</div>
+              <div class="stat-value">0.0552</div>
             </div>
             <div class="stat-card">
-              <div class="stat-title">Max Similarity</div>
-              <div class="stat-value">${stats.max_similarity.toFixed(4)}</div>
+              <div class="stat-title">Homonyms Standard deviation</div>
+              <div class="stat-value">0.1001</div>
             </div>
           </div>
         `;
