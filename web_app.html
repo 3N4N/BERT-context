@@ -1667,7 +1667,7 @@
         const layout = {
           title: data.title || "Error with Common Words",
           xaxis: {
-            title: "Number of Common Words",
+            title: "Percentage of Common Words",
           },
           yaxis: {
             title: "Error",
@@ -1845,6 +1845,7 @@
             x: 0,
             y: 1,
           },
+          showlegend: false,
         };
 
         Plotly.newPlot(plotDiv, traces, layout);

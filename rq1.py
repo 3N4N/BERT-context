@@ -115,11 +115,14 @@ def _scatter():
     # df['DPSim'] = dotsims
 
     df['Color'] = df['Synonym'].apply(lambda x: 'red' if x == 'F' else 'blue' )
-    df['Size'] = df.apply(lambda row: abs(len(row['Word1']) - len(row['Word2'])), axis=1)
-    df['Size'] = df.apply(lambda row: len(row['Word1']) + len(row['Word2']), axis=1)
+    df['Size'] = df.apply(lambda row: abs(len(row['Sent1']) - len(row['Sent2'])), axis=1)
+    df['Size'] = [10] * len(df)
+    df['Total'] = df.apply(lambda row: len(row['Sent1'].split()) + len(row['Sent2'].split()), axis=1)
 
     df['Error'] = df.apply(lambda row: 1-row['CoSim'] if row['Synonym']=='T' else row['CoSim'], axis=1)
-    df['Same'] = df.apply(lambda row: len(set(row['Sent1'].split()).intersection(set(row['Sent2'].split()))), axis=1)
+    # df['Same'] = df.apply(lambda row: len(set(row['Sent1'].split()).intersection(set(row['Sent2'].split()))), axis=1)
+    df['Same'] = df.apply(lambda row: len(set(row['Sent1'].split()).intersection(set(row['Sent2'].split()))) / (row['Total']/2), axis=1)
+
 
     return df
 
