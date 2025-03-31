@@ -554,6 +554,90 @@
         font-size: 48px;
         margin-bottom: 15px;
       }
+      /* Add these styles to the existing <style> section in the HTML */
+
+      /* Table styles for outliers */
+      .table-container {
+        overflow-x: auto;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+      }
+
+      th,
+      td {
+        padding: 8px 12px;
+        text-align: left;
+        border: 1px solid var(--border-color);
+      }
+
+      th {
+        background-color: var(--secondary-color);
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      tr:hover {
+        background-color: rgba(58, 110, 165, 0.05);
+      }
+
+      /* Word highlight styles */
+      .highlight-word {
+        font-weight: bold;
+        color: var(--primary-color);
+        background-color: rgba(58, 110, 165, 0.1);
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+
+      /* Additional visualization styles */
+      .visualization-container {
+        position: relative;
+        min-height: 400px;
+      }
+
+      .vis-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+      }
+
+      /* Button styles */
+      .btn-group {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 15px;
+      }
+
+      .btn-sm {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
     </style>
     <!-- Font Awesome for icons -->
     <link
@@ -574,7 +658,7 @@
           <ul>
             <li>
               <a href="#" onclick="activateTab('future')">
-                <i class="fas fa-chart-bar"></i> RQ1:
+                <i class="fas fa-chart-bar"></i> RQ1: Semantic Embeds
               </a>
             </li>
             <li>
@@ -623,7 +707,7 @@
 
           <div class="tabs">
             <div class="tab" onclick="activateTab('future')" data-tab="future">
-              Future Module
+              Semantic Embedding Evaluation
             </div>
 
             <div
@@ -681,12 +765,14 @@
                   <div class="welcome-icon">
                     <i class="fas fa-chart-bar"></i>
                   </div>
-                  <h3>Future Module</h3>
+                  <h3>Semantic Embedding Evaluation</h3>
                   <p>
                     Additional analysis module for expanded NLP visualization
                     capabilities
                   </p>
-                  <button onclick="activateTab('future')">Coming Soon</button>
+                  <button onclick="activateTab('future')">
+                    Launch Analysis
+                  </button>
                 </div>
               </div>
 
@@ -751,11 +837,11 @@
             </div>
 
             <div class="card">
-              <div class="card-header">Future Module</div>
+              <div class="card-header">Semantic Embedding Evaluation</div>
               <div class="card-body">
                 <div class="form-group">
                   <label for="future-upload">
-                    Upload Future Module analysis (JSON):
+                    Upload Semantic Embedding Evaluation (JSON):
                   </label>
                   <input type="file" id="future-upload" accept=".json" />
                 </div>
@@ -897,6 +983,13 @@
               </div>
             </div>
 
+            <div class="card">
+              <div class="card-header">Overall Statistics</div>
+              <div class="card-body">
+                <div id="cl-overall-stats"></div>
+              </div>
+            </div>
+
             <!-- Main PCA Visualization -->
             <div class="card">
               <div class="card-header">
@@ -933,7 +1026,7 @@
               </div>
             </div>
 
-            <div class="grid">
+            <!-- <div class="grid">
               <div class="card">
                 <div class="card-header">
                   Cross-lingual Word Similarity by Category
@@ -952,7 +1045,7 @@
                   <div id="cl-similarity-heatmap" class="visualization"></div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="card">
               <div class="card-header">Word Pairs and Contexts</div>
@@ -966,13 +1059,6 @@
                 <div class="card-header">Category Statistics</div>
                 <div class="card-body">
                   <div id="cl-category-stats"></div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header">Overall Statistics</div>
-                <div class="card-body">
-                  <div id="cl-overall-stats"></div>
                 </div>
               </div>
             </div>
@@ -998,68 +1084,83 @@
           </div>
 
           <!-- Future Module Page -->
+          <!-- Replace the existing Future Module tab content with this code -->
           <div id="future" class="tab-content">
-            <h2>Future Analysis Module</h2>
+            <h2>BERT Word Sense Analysis</h2>
             <p>
-              This module is currently in development. Placeholder
-              visualizations shown below.
+              Analyzing the effectiveness of cosine similarity for
+              distinguishing between homonyms and synonyms in BERT embeddings.
             </p>
 
             <div class="card">
-              <div class="card-header">Data Status</div>
+              <div class="card-header">Word Selection</div>
               <div class="card-body">
-                <div id="future-status" class="status-message status-info">
-                  Future module is under development
+                <div class="controls">
+                  <div class="form-group">
+                    <label for="future-word-select">Filter by word:</label>
+                    <select
+                      id="future-word-select"
+                      onchange="filterPCAByWord()"
+                    >
+                      <option value="all">All Words</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="grid">
               <div class="card">
-                <div class="card-header">Placeholder Graph 1</div>
+                <div class="card-header">PCA of Word Embeddings</div>
                 <div class="card-body">
-                  <div class="placeholder-graph">
-                    <div class="placeholder-text">
-                      <i class="fas fa-chart-area"></i>
-                      <h3>Graph Coming Soon</h3>
-                      <p>
-                        This visualization will be implemented in a future
-                        update
-                      </p>
-                    </div>
-                  </div>
+                  <div id="pca-scatter-plot" class="visualization"></div>
                 </div>
               </div>
 
               <div class="card">
-                <div class="card-header">Placeholder Graph 2</div>
+                <div class="card-header">Summary Statistics</div>
                 <div class="card-body">
-                  <div class="placeholder-graph">
-                    <div class="placeholder-text">
-                      <i class="fas fa-chart-pie"></i>
-                      <h3>Graph Coming Soon</h3>
-                      <p>
-                        This visualization will be implemented in a future
-                        update
-                      </p>
-                    </div>
-                  </div>
+                  <div id="summary-stats"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid">
+              <div class="card">
+                <div class="card-header">Cosine Similarity Distribution</div>
+                <div class="card-body">
+                  <div id="cosine-similarity-plot" class="visualization"></div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">Reliability with Common Words</div>
+                <div class="card-body">
+                  <div id="error-plot" class="visualization"></div>
                 </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="card-header">Placeholder Comparison</div>
+              <div class="card-header">Outlier Analysis</div>
               <div class="card-body">
-                <div class="placeholder-graph">
-                  <div class="placeholder-text">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Detailed Comparison Coming Soon</h3>
-                    <p>
-                      This section will contain detailed comparative analysis
-                    </p>
-                  </div>
+                <div id="outliers-table"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">Data Status</div>
+              <div class="card-body">
+                <div id="future-status" class="status-message status-info">
+                  Please upload Semantic Embedding Evaluation JSON data to begin
+                  visualization
                 </div>
+                <button
+                  onclick="activateTab('upload')"
+                  style="margin-top: 10px"
+                >
+                  Go to Upload Page
+                </button>
               </div>
             </div>
           </div>
@@ -1188,6 +1289,27 @@
       function toggleTheme() {
         // Theme toggling functionality will be implemented later
         alert("Theme toggling will be implemented in a future update");
+      }
+
+      function initializeFutureUI() {
+        if (!appState.future.loaded) return;
+
+        showFutureStatus(
+          "Semantic Embedding Evaluation data loaded successfully. Generating visualizations...",
+          "info"
+        );
+
+        // Create the visualizations
+        createCosineSimilarityPlot();
+        createErrorPlot();
+        createPCAScatterPlot();
+        createOutliersTable();
+        populateFutureWordSelect();
+
+        showFutureStatus(
+          "Semantic Embedding Evaluation visualizations loaded successfully.",
+          "success"
+        );
       }
 
       // Upload Functions
@@ -1334,14 +1456,56 @@
           `Loading file: ${file.name}...`,
           "info"
         );
-        // This is just a placeholder for future functionality
-        setTimeout(() => {
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          try {
+            const data = JSON.parse(e.target.result);
+
+            // Verify it has the expected structure
+            if (
+              !data["similarity scores"] ||
+              !data.PCA_data ||
+              !data.scatter_data
+            ) {
+              throw new Error(
+                "Invalid data format: missing required fields for Semantic Embedding Evaluation analysis"
+              );
+            }
+
+            appState.future.data = data;
+            appState.future.loaded = true;
+
+            // Initialize Future UI with loaded data
+            initializeFutureUI();
+
+            showUploadStatus(
+              "future-upload-status",
+              `Data successfully loaded from ${file.name}`,
+              "success"
+            );
+            showFutureStatus(
+              `Semantic Embedding Evaluation data loaded successfully from ${file.name}`,
+              "success"
+            );
+          } catch (error) {
+            showUploadStatus(
+              "future-upload-status",
+              `Error loading data: ${error.message}`,
+              "error"
+            );
+          }
+        };
+
+        reader.onerror = function () {
           showUploadStatus(
             "future-upload-status",
-            "Future module not yet implemented. Data not processed.",
-            "info"
+            "Error reading file",
+            "error"
           );
-        }, 1000);
+        };
+
+        reader.readAsText(file);
       }
 
       function showUploadStatus(elementId, message, type = "info") {
@@ -1360,6 +1524,469 @@
         const statusEl = document.getElementById("cross-lingual-status");
         statusEl.innerHTML = message;
         statusEl.className = `status-message status-${type}`;
+      }
+
+      // Future
+
+      function showFutureStatus(message, type = "info") {
+        const statusEl = document.getElementById("future-status");
+        statusEl.innerHTML = message;
+        statusEl.className = `status-message status-${type}`;
+      }
+
+      // Populate word selection dropdown
+      function populateFutureWordSelect() {
+        const select = document.getElementById("future-word-select");
+        if (!select) return;
+
+        select.innerHTML = '<option value="all">All Words</option>';
+
+        if (!appState.future.data || !appState.future.data.PCA_data) return;
+
+        // Get unique target words
+        const points = appState.future.data.PCA_data.points;
+        const uniqueWords = [...new Set(points.map((p) => p.Target))];
+
+        uniqueWords.forEach((word) => {
+          const option = document.createElement("option");
+          option.value = word;
+          option.textContent = word;
+          select.appendChild(option);
+        });
+      }
+
+      // Create Cosine Similarity Plot
+      function createCosineSimilarityPlot() {
+        if (!appState.future.loaded || !appState.future.data.scatter_data)
+          return;
+        const data = appState.future.data.scatter_data;
+        const plotDiv = document.getElementById("cosine-similarity-plot");
+        if (!plotDiv) return;
+
+        // Prepare data for plotting
+        const bluePoints = data.points.filter((p) => p.Color === "blue");
+        const redPoints = data.points.filter((p) => p.Color === "red");
+
+        const traces = [
+          {
+            x: bluePoints.map((p) => p.X),
+            y: bluePoints.map((p) => p.Y),
+            mode: "markers",
+            type: "scatter",
+            name: "Synonyms",
+            text: bluePoints.map((p) => p.Hover), // Add hover text
+            hoverinfo: "text", // Display the text on hover
+            marker: {
+              color: "blue",
+              size: bluePoints.map((p) => p.Size),
+            },
+          },
+          {
+            x: redPoints.map((p) => p.X),
+            y: redPoints.map((p) => p.Y),
+            mode: "markers",
+            type: "scatter",
+            name: "Homonyms",
+            text: redPoints.map((p) => p.Hover), // Add hover text
+            hoverinfo: "text", // Display the text on hover
+            marker: {
+              color: "red",
+              size: redPoints.map((p) => p.Size),
+            },
+          },
+        ];
+
+        const layout = {
+          title: data.title || "Cosine Similarity Scatter Plot",
+          xaxis: {
+            title: "Index",
+          },
+          yaxis: {
+            title: "Cosine Similarity",
+            range: [0, 1],
+          },
+          hovermode: "closest",
+          legend: {
+            x: 0,
+            y: 1,
+          },
+        };
+
+        Plotly.newPlot(plotDiv, traces, layout);
+      }
+
+      // Create Error Plot
+      function createErrorPlot() {
+        if (
+          !appState.future.loaded ||
+          !appState.future.data[
+            "Realiability of cosine similarity with #common words"
+          ]
+        )
+          return;
+        const data =
+          appState.future.data[
+            "Realiability of cosine similarity with #common words"
+          ];
+        const plotDiv = document.getElementById("error-plot");
+        if (!plotDiv) return;
+
+        // Prepare data for plotting
+        const bluePoints = data.points.filter((p) => p.Color === "blue");
+        const redPoints = data.points.filter((p) => p.Color === "red");
+
+        const traces = [
+          {
+            x: bluePoints.map((p) => p.X),
+            y: bluePoints.map((p) => p.Y),
+            mode: "markers",
+            type: "scatter",
+            name: "Synonyms",
+            text: bluePoints.map((p) => p.Hover), // Add hover text
+            hoverinfo: "text", // Display the text on hover
+            marker: {
+              color: "blue",
+              size: bluePoints.map((p) => p.Size || 8),
+            },
+          },
+          {
+            x: redPoints.map((p) => p.X),
+            y: redPoints.map((p) => p.Y),
+            mode: "markers",
+            type: "scatter",
+            name: "Homonyms",
+            text: redPoints.map((p) => p.Hover), // Add hover text
+            hoverinfo: "text", // Display the text on hover
+            marker: {
+              color: "red",
+              size: redPoints.map((p) => p.Size || 8),
+            },
+          },
+        ];
+
+        const layout = {
+          title: data.title || "Error with Common Words",
+          xaxis: {
+            title: "Number of Common Words",
+          },
+          yaxis: {
+            title: "Error",
+            range: [0, 1],
+          },
+          hovermode: "closest",
+          legend: {
+            x: 0,
+            y: 1,
+          },
+        };
+
+        Plotly.newPlot(plotDiv, traces, layout);
+      }
+
+      // Create PCA Scatter Plot
+      function createPCAScatterPlot() {
+        if (!appState.future.loaded || !appState.future.data.PCA_data) return;
+
+        const data = appState.future.data.PCA_data;
+        const plotDiv = document.getElementById("pca-scatter-plot");
+        const wordFilter = document.getElementById("future-word-select");
+
+        if (!plotDiv) return;
+
+        let selectedWord = wordFilter ? wordFilter.value : "all";
+
+        // Filter points if a specific word is selected
+        let points = data.points;
+        let synonymPoints = [];
+
+        if (selectedWord !== "all") {
+          // Find the target points
+          points = points.filter((p) => p.Target === selectedWord);
+
+          // Find all synonym words from the selected target points
+          const allSynonyms = new Set();
+          points.forEach((point) => {
+            if (point.Synonyms && Array.isArray(point.Synonyms)) {
+              point.Synonyms.forEach((syn) => allSynonyms.add(syn));
+            }
+          });
+
+          // Find synonym points from all data points
+          if (allSynonyms.size > 0) {
+            synonymPoints = data.points.filter(
+              (p) => allSynonyms.has(p.Word) && p.Target !== selectedWord
+            );
+          }
+        }
+
+        const traces = [];
+
+        // First add the selected word points
+        if (points.length > 0) {
+          traces.push({
+            x: points.map((p) => p.PCA_X || p.tSNE_X),
+            y: points.map((p) => p.PCA_Y || p.tSNE_Y),
+            mode: "markers+text",
+            type: "scatter",
+            name: selectedWord !== "all" ? selectedWord : "All Words",
+            text: points.map((p) => p.Word),
+            textposition: "top center",
+            marker: {
+              color: "#1f77b4", // Primary color for the selected word
+              size: 12,
+            },
+            hovertemplate:
+              "<b>%{text}</b><br>Target: %{customdata.target}" +
+              "<br>Sentence: %{customdata.sentence}<extra></extra>",
+            customdata: points.map((p) => ({
+              target: p.Target,
+              sentence: p._Sentence || "",
+            })),
+          });
+        }
+
+        // If "all" is selected, group by target word for coloring
+        if (selectedWord === "all") {
+          const targets = [...new Set(points.map((p) => p.Target))];
+          const colors = [
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf",
+          ];
+
+          targets.forEach((target, i) => {
+            const targetPoints = points.filter((p) => p.Target === target);
+
+            traces.push({
+              x: targetPoints.map((p) => p.PCA_X || p.tSNE_X),
+              y: targetPoints.map((p) => p.PCA_Y || p.tSNE_Y),
+              mode: "markers+text",
+              type: "scatter",
+              name: target,
+              text: targetPoints.map((p) => p.Word),
+              textposition: "top center",
+              marker: {
+                color: colors[i % colors.length],
+                size: 12,
+              },
+              hovertemplate:
+                "<b>%{text}</b><br>Target: %{customdata.target}" +
+                "<br>Sentence: %{customdata.sentence}<extra></extra>",
+              customdata: targetPoints.map((p) => ({
+                target: p.Target,
+                sentence: p._Sentence || "",
+              })),
+            });
+          });
+        }
+        // If a specific word is selected, add the synonyms as separate traces with different colors
+        else if (synonymPoints.length > 0) {
+          // Group synonyms by their word
+          const synonymWords = [...new Set(synonymPoints.map((p) => p.Word))];
+          const colors = [
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf",
+          ];
+
+          synonymWords.forEach((synonym, i) => {
+            const synPoints = synonymPoints.filter((p) => p.Word === synonym);
+
+            traces.push({
+              x: synPoints.map((p) => p.PCA_X || p.tSNE_X),
+              y: synPoints.map((p) => p.PCA_Y || p.tSNE_Y),
+              mode: "markers+text",
+              type: "scatter",
+              name: `${synonym} (synonym)`,
+              text: synPoints.map((p) => p.Word),
+              textposition: "top center",
+              marker: {
+                color: colors[i % colors.length],
+                size: 12,
+              },
+              hovertemplate:
+                "<b>%{text}</b><br>Synonym of: " +
+                selectedWord +
+                "<br>Target: %{customdata.target}" +
+                "<br>Sentence: %{customdata.sentence}<extra></extra>",
+              customdata: synPoints.map((p) => ({
+                target: p.Target,
+                sentence: p._Sentence || "",
+              })),
+            });
+          });
+        }
+
+        const layout = {
+          title:
+            selectedWord !== "all"
+              ? `PCA of "${selectedWord}" and its synonyms`
+              : data.title || "PCA of Word Embeddings",
+          xaxis: {
+            title: "PC1",
+          },
+          yaxis: {
+            title: "PC2",
+          },
+          hovermode: "closest",
+          legend: {
+            x: 0,
+            y: 1,
+          },
+        };
+
+        Plotly.newPlot(plotDiv, traces, layout);
+      }
+
+      // Filter PCA by specific word
+      function filterPCAByWord() {
+        createPCAScatterPlot();
+      }
+
+      // Create Outliers Table
+      function createOutliersTable() {
+        if (!appState.future.loaded || !appState.future.data["Outliers Table"])
+          return;
+
+        const data = appState.future.data["Outliers Table"];
+        const tableDiv = document.getElementById("outliers-table");
+
+        if (!tableDiv) return;
+
+        // Create synonym outliers table
+        let tableHTML = `
+    <h3>Synonym Outliers</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Word 1</th>
+            <th>Word 2</th>
+            <th>Cosine Similarity</th>
+            <th>Sentence 1</th>
+            <th>Sentence 2</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+
+        // Get indices to display (show first 10 or all if less than 10)
+        const synKeys = Object.keys(data.Synonyms.Word1);
+        const synIndices = synKeys.slice(0, Math.min(10, synKeys.length));
+
+        synIndices.forEach((idx) => {
+          tableHTML += `
+      <tr>
+        <td>${data.Synonyms.Word1[idx]}</td>
+        <td>${data.Synonyms.Word2[idx]}</td>
+        <td>${parseFloat(data.Synonyms.CoSim[idx]).toFixed(4)}</td>
+        <td>${data.Synonyms.Sent1[idx]}</td>
+        <td>${data.Synonyms.Sent2[idx]}</td>
+      </tr>
+    `;
+        });
+
+        tableHTML += `
+        </tbody>
+      </table>
+    </div>
+    
+    <h3>Homonym Outliers</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Word 1</th>
+            <th>Word 2</th>
+            <th>Cosine Similarity</th>
+            <th>Sentence 1</th>
+            <th>Sentence 2</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+
+        // Get indices for homonyms
+        const homKeys = Object.keys(data.Homonyms.Word1);
+        const homIndices = homKeys.slice(0, Math.min(10, homKeys.length));
+
+        homIndices.forEach((idx) => {
+          tableHTML += `
+      <tr>
+        <td>${data.Homonyms.Word1[idx]}</td>
+        <td>${data.Homonyms.Word2[idx]}</td>
+        <td>${parseFloat(data.Homonyms.CoSim[idx]).toFixed(4)}</td>
+        <td>${data.Homonyms.Sent1[idx]}</td>
+        <td>${data.Homonyms.Sent2[idx]}</td>
+      </tr>
+    `;
+        });
+
+        tableHTML += `
+        </tbody>
+      </table>
+    </div>
+  `;
+
+        tableDiv.innerHTML = tableHTML;
+      }
+
+      // Create summary stats section
+      function createSummaryStats() {
+        if (
+          !appState.future.loaded ||
+          !appState.future.data["similarity scores"]
+        )
+          return;
+
+        const data = appState.future.data["similarity scores"];
+        const statsDiv = document.getElementById("summary-stats");
+
+        if (!statsDiv) return;
+
+        statsDiv.innerHTML = `
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Synonym Avg. Similarity</div>
+        <div class="stat-value">${data.synonym.avg.toFixed(4)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Homonym Avg. Similarity</div>
+        <div class="stat-value">${data.homonym.avg.toFixed(4)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Synonym Min-Max</div>
+        <div class="stat-value">${data.synonym.min.toFixed(
+          2
+        )}-${data.synonym.max.toFixed(2)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Homonym Min-Max</div>
+        <div class="stat-value">${data.homonym.min.toFixed(
+          2
+        )}-${data.homonym.max.toFixed(2)}</div>
+      </div>
+    </div>
+    <div class="status-message status-info" style="margin-top: 20px;">
+      <strong>Key Finding:</strong> ${
+        data.future
+          ? data.future.conclusion
+          : "Cosine similarity is not a reliable metric for determining homonyms and synonyms from BERT token embeddings."
+      }
+    </div>
+  `;
       }
 
       // WiC Visualization Functions
@@ -1732,9 +2359,9 @@
         // Display visualizations
         displayClOverallStats();
         displayClCategoryStats();
-        createClCategorySimilarityChart();
+        // createClCategorySimilarityChart();
         createClPCAScatterPlot();
-        createClSimilarityHeatmap();
+        // createClSimilarityHeatmap();
         displayClWordPairsTable();
       }
 
@@ -2023,12 +2650,16 @@
         statsDiv.innerHTML = `
           <div class="stats-grid">
             <div class="stat-card">
-              <div class="stat-title">Mean Similarity</div>
-              <div class="stat-value">${stats.mean_similarity.toFixed(4)}</div>
+              <div class="stat-title">Synonym Mean Similarity</div>
+              <div class="stat-value">${stats.mean_similarity_syn.toFixed(
+                4
+              )}</div>
             </div>
             <div class="stat-card">
-              <div class="stat-title">Standard Deviation</div>
-              <div class="stat-value">${stats.std_similarity.toFixed(4)}</div>
+              <div class="stat-title">Homonyms Mean Similarity</div>
+              <div class="stat-value">${stats.mean_similarity_hom.toFixed(
+                4
+              )}</div>
             </div>
             <div class="stat-card">
               <div class="stat-title">Min Similarity</div>
@@ -2615,6 +3246,56 @@
 
         return colors[category] || "rgb(0, 0, 0)";
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add event listener for future word select if it doesn't exist already
+        const futureWordSelect = document.getElementById("future-word-select");
+        if (futureWordSelect) {
+          futureWordSelect.addEventListener("change", filterPCAByWord);
+        }
+
+        // Initialize future module if data is already loaded
+        if (appState.future.loaded) {
+          initializeFutureUI();
+        }
+      });
+
+      // Update the uploadFutureData function to actually process the data
+      // (Replace the existing uploadFutureData function with the one from nlp-visualization-updates)
+
+      // Update the toggleSidebar function to handle future module activation
+      const originalActivateTab = activateTab;
+      activateTab = function (tabId) {
+        originalActivateTab(tabId);
+
+        // Check if we're activating the future module and it's loaded
+        if (tabId === "future" && appState.future.loaded) {
+          // Refresh visualizations on tab activation
+          createCosineSimilarityPlot();
+          createErrorPlot();
+          createPCAScatterPlot();
+          createSummaryStats();
+
+          // Make sure charts are properly sized
+          window.dispatchEvent(new Event("resize"));
+        }
+      };
+
+      // Add to the initialization functions to ensure the future module is included
+      function initializeAllTabs() {
+        if (appState.wic.loaded) {
+          initializeWicUI();
+        }
+        if (appState.crossLingual.loaded) {
+          initializeCrossLingualUI();
+        }
+        if (appState.future.loaded) {
+          initializeFutureUI();
+        }
+      }
+
+      // Call this on initial page load
+      setTimeout(initializeAllTabs, 500);
     </script>
   </body>
 </html>
